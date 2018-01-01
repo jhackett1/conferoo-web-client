@@ -1,0 +1,20 @@
+main.info ul.pages-list {
+  margin-top: 20px; }
+  main.info ul.pages-list li {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    position: relative;
+    font-size: 1em;
+    border-radius: 1px; }
+    main.info ul.pages-list li a {
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      main.info ul.pages-list li a h4 {
+        color: #505050; }

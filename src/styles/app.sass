@@ -1,0 +1,96 @@
+@import 'variables.sass'
+
+// Resets & global styles
+*
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+  font-family: $font-stack
+body
+  background-color: $grey5
+.container
+  max-width: $max-width
+  margin: 0px auto
+  padding: 14px
+h1, h2, h3, h4, h5
+  color: $grey1
+p
+  color: $grey2
+hr
+  border: none
+  border-bottom: 1px solid $grey4
+  width: 100%
+ul
+  list-style-type: none
+
+// App header
+header
+  background-color: $blue
+  display: flex
+  .container
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    text-decoration: none
+    img
+      max-height: 70px
+      opacity: 0.8
+    h1
+      color: $white
+      margin-left: 20px
+      font-size: 1.4em
+      flex: 1
+      span
+        opacity: 0.5
+
+// Main menu
+nav
+  ul
+    border-bottom: 1px solid $grey4
+    margin-bottom: 10px
+    li
+      display: inline-block
+      padding: 15px 20px 15px 0px
+      font-size: 1.1em
+      a
+        color: $grey2
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+// App footer
+footer
+  background-color: $grey1
+  color: $grey5
+  h3
+    color: $grey5
+    margin-bottom: 10px
+  ul
+    li
+      margin-bottom: 3px
+      a
+        color: $grey5
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+  .copyright-notice
+      opacity: 0.5
+      font-size: 0.85em
+      margin-top: 20px
+
+// Basic view container styles
+main
+  margin-bottom: 40px
+  h2
+    font-size: 2em
+    margin-bottom: 10px
+
+@media screen and (min-width: 600px)
+  nav
+    ul
+      margin-bottom: 40px
+  main
+    h2
+      font-size: 2.5em
