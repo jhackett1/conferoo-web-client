@@ -1,5 +1,3 @@
-import config from '../config';
-
 const userService = {
 
   getToken: function(){

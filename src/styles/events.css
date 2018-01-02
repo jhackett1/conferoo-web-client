@@ -1,0 +1,16 @@
+main.events ul.events-navigation {
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 10px; }
+  main.events ul.events-navigation li {
+    display: inline-block;
+    padding: 15px 20px 15px 0px;
+    font-size: 0.9em; }
+    main.events ul.events-navigation li a {
+      color: #707070;
+      text-decoration: none; }
+      main.events ul.events-navigation li a:hover {
+        text-decoration: underline; }
+
+@media screen and (min-width: 600px) {
+  main.events ul.events-navigation li {
+    font-size: 1em; } }

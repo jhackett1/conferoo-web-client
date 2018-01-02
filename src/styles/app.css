@@ -5,7 +5,8 @@
   font-family: "Nunito Sans", "Helvetica", sans-serif; }
 
 body {
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  position: relative; }
 
 .container {
   max-width: 700px;
@@ -16,7 +17,7 @@ h1, h2, h3, h4, h5 {
   color: #333; }
 
 p {
-  color: #505050; }
+  color: #707070; }
 
 hr {
   border: none;
@@ -25,6 +26,57 @@ hr {
 
 ul {
   list-style-type: none; }
+
+a.button, button {
+  font-family: "Nunito Sans", "Helvetica", sans-serif;
+  background-color: #4a6bf6;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 1px;
+  color: #ffffff;
+  margin-top: 10px;
+  min-width: 100px;
+  cursor: pointer; }
+
+.spinner {
+  height: 5px;
+  width: 100%;
+  position: fixed;
+  top: calc(36px + 98px);
+  overflow: hidden;
+  background-color: rgba(207, 207, 207, 0.2); }
+  .spinner:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 4px;
+    background-color: rgba(74, 107, 246, 0.5);
+    animation: loading 2s linear infinite;
+    transition: 0.1s; }
+
+@keyframes fadeIn {}from {
+  opacity: 0; }
+
+to {
+  opacity: 1; }
+
+@keyframes loading {
+  from {
+    left: -200px;
+    width: 30%; }
+  50% {
+    width: 30%; }
+  70% {
+    width: 70%; }
+  80% {
+    left: 50%; }
+  95% {
+    left: 120%; }
+  to {
+    left: 100%; } }
 
 header {
   background-color: #4a6bf6;
@@ -55,7 +107,7 @@ nav ul {
     padding: 15px 20px 15px 0px;
     font-size: 1.1em; }
     nav ul li a {
-      color: #505050;
+      color: #707070;
       text-decoration: none; }
       nav ul li a:hover {
         text-decoration: underline; }
@@ -84,8 +136,31 @@ main {
     font-size: 2em;
     margin-bottom: 10px; }
 
+section.banner {
+  background-color: #627ff7;
+  color: #f6f6f6;
+  font-size: 0.8em; }
+  section.banner .container {
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    section.banner .container a {
+      color: #f6f6f6; }
+    section.banner .container img {
+      margin-right: 15px; }
+
 @media screen and (min-width: 600px) {
   nav ul {
-    margin-bottom: 40px; }
+    margin-bottom: 25px; }
   main h2 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+  a.button, button {
+    padding: 15px;
+    font-size: 1.1em;
+    min-width: 130px; } }
+
+@media screen and (min-width: 1300px) {
+  nav ul {
+    margin-bottom: 40px; } }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import infoApi from '../../services/info';
 import '../../styles/info.css';
+import Spinner from  '../../partials/Spinner.react';
 
-
-class InfoList extends Component {
+class Info extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -14,7 +13,6 @@ class InfoList extends Component {
   }
 
   componentWillMount(){
-    console.log('componentwillmounting')
     infoApi.getPages((err, pages)=>{
       if(err) return;
       this.setState({pages: pages})
@@ -22,33 +20,23 @@ class InfoList extends Component {
   }
 
   render() {
-    const Detail = () => {
-      console.log(this.props.id)
-      if (this.state.selected === this.props.id) {
-        return(
-          <article>jjjjj</article>
-        )
-      } else {
-        return( null )
-      }
-    }
-
-
     const PagesList = this.state.pages.map((page)=>
-      <li key={page._id} onClick={()=>{
+      <li className={this.state.selected === page._id ? 'page-item active' : 'page-item'} key={page._id} onClick={()=>{
         this.setState({selected: page._id})
-        console.log(this.state.selected)
       }}>
         <h4>{page.title}</h4>
-        <Detail id={page._id} content={page.content}/>
+        {this.state.selected === page._id ? <article dangerouslySetInnerHTML={{__html: page.content}}></article> : null}
+
       </li>
     );
 
     return (
       <main className="info">
+        {this.state.pages.length === 0 ? <Spinner show={true}/> : null}      
         <div className="container">
           <h2>Info</h2>
           <p>Everything you need to know about the conference.</p>
+
           <ul className="pages-list">
             {PagesList}
           </ul>
@@ -58,4 +46,4 @@ class InfoList extends Component {
   }
 }
 
-export default InfoList;
+export default Info;

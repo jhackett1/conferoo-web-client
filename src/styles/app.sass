@@ -8,6 +8,7 @@
   font-family: $font-stack
 body
   background-color: $grey5
+  position: relative
 .container
   max-width: $max-width
   margin: 0px auto
@@ -22,6 +23,59 @@ hr
   width: 100%
 ul
   list-style-type: none
+a.button, button
+  font-family: $font-stack
+  background-color: $blue
+  padding: 10px
+  font-size: 1em
+  border: none
+  border-radius: 1px
+  color: $white
+  margin-top: 10px
+  min-width: 100px
+  cursor: pointer
+.spinner
+  height: 5px
+  width: 100%
+  position: fixed
+  top: calc(36px + 98px)
+  // left: 0px
+  overflow: hidden
+  background-color: transparentize($grey4, 0.8)
+  &:before
+    display: block
+    position: absolute
+    content: ""
+    left: -200px
+    width: 200px
+    height: 4px
+    background-color: transparentize($blue, 0.5)
+    animation: loading 2s linear infinite
+    transition: 0.1s
+
+
+// Animation
+@keyframes fadeIn
+from
+  opacity: 0
+to
+  opacity: 1
+
+@keyframes loading
+  from
+    left: -200px
+    width: 30%
+  50%
+    width: 30%
+  70%
+    width: 70%
+  80%
+    left: 50%
+  95%
+    left: 120%
+  to
+    left: 100%
+
 
 // App header
 header
@@ -87,10 +141,36 @@ main
     font-size: 2em
     margin-bottom: 10px
 
+section.banner
+  background-color: lighten($blue, 5)
+  color: $grey5
+  font-size: 0.8em
+  .container
+    padding: 8px 14px
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    a
+      color: $grey5
+    img
+      margin-right: 15px
+
+// First breakpoint
 @media screen and (min-width: 600px)
   nav
     ul
-      margin-bottom: 40px
+      margin-bottom: 25px
   main
     h2
       font-size: 2.5em
+  a.button, button
+    padding: 15px
+    font-size: 1.1em
+    min-width: 130px
+
+// Second breakpoint
+@media screen and (min-width: 1300px)
+  nav
+    ul
+      margin-bottom: 40px

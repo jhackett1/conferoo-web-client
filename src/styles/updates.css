@@ -1,0 +1,67 @@
+main.update-single img {
+  width: 100%;
+  margin: 10px auto; }
+
+main.update-single h5 {
+  color: #969696;
+  font-size: 1em;
+  margin-bottom: 10px; }
+  main.update-single h5 ul.themes-list {
+    margin-bottom: 10px;
+    display: inline; }
+    main.update-single h5 ul.themes-list li {
+      display: inline;
+      color: #4a6bf6;
+      font-size: 0.9em;
+      margin-right: 5px; }
+
+main.update-single p {
+  font-size: 1.1em;
+  margin-top: 20px; }
+  main.update-single p a {
+    color: #4a6bf6; }
+
+@media screen and (min-width: 500px) {
+  main.update-single h2 {
+    font-size: 3em; } }
+
+main.updates ul.updates-list {
+  margin-top: 20px; }
+  main.updates ul.updates-list li.update-item {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 1px;
+    overflow: hidden;
+    cursor: pointer; }
+    main.updates ul.updates-list li.update-item a {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none; }
+      main.updates ul.updates-list li.update-item a div.image {
+        width: 100%;
+        flex: 1;
+        height: 200px;
+        background-position: center;
+        background-size: cover; }
+      main.updates ul.updates-list li.update-item a aside {
+        padding: 15px;
+        flex: 1; }
+        main.updates ul.updates-list li.update-item a aside h3 {
+          font-size: 1.2em; }
+        main.updates ul.updates-list li.update-item a aside p {
+          color: #969696;
+          margin-top: 3px;
+          font-size: 0.9em; }
+
+@media screen and (min-width: 500px) {
+  main.updates ul.updates-list li.update-item a {
+    flex-direction: row; }
+    main.updates ul.updates-list li.update-item a div.image {
+      width: 300px;
+      height: 200px; }
+    main.updates ul.updates-list li.update-item a aside {
+      padding: 20px; }
+      main.updates ul.updates-list li.update-item a aside h3 {
+        font-size: 1.5em; } }

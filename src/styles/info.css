@@ -1,20 +1,30 @@
 main.info ul.pages-list {
   margin-top: 20px; }
-  main.info ul.pages-list li {
+  main.info ul.pages-list li.page-item {
     display: block;
     padding: 15px;
     width: 100%;
     margin-bottom: 10px;
     background-color: #ffffff;
     position: relative;
-    font-size: 1em;
-    border-radius: 1px; }
-    main.info ul.pages-list li a {
-      text-decoration: none;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0; }
-      main.info ul.pages-list li a h4 {
-        color: #505050; }
+    border-radius: 1px;
+    cursor: pointer; }
+    main.info ul.pages-list li.page-item h4 {
+      font-size: 1.1em;
+      color: #333; }
+    main.info ul.pages-list li.page-item article {
+      margin-top: 15px; }
+      main.info ul.pages-list li.page-item article p {
+        margin-bottom: 10px; }
+      main.info ul.pages-list li.page-item article a {
+        color: #4a6bf6; }
+      main.info ul.pages-list li.page-item article ol, main.info ul.pages-list li.page-item article ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-top: -5px;
+        margin-bottom: 10px; }
+        main.info ul.pages-list li.page-item article ol li, main.info ul.pages-list li.page-item article ul li {
+          color: #707070;
+          padding-left: 5px; }
+    main.info ul.pages-list li.page-item.active {
+      cursor: default; }

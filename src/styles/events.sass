@@ -1,0 +1,21 @@
+@import 'variables.sass'
+
+main.events
+  ul.events-navigation
+    border-bottom: 1px solid $grey4
+    margin-bottom: 10px
+    li
+      display: inline-block
+      padding: 15px 20px 15px 0px
+      font-size: 0.9em
+      a
+        color: $grey2
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+@media screen and (min-width: 600px)
+  main.events
+    ul.events-navigation
+      li
+        font-size: 1em

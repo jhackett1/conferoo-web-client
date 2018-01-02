@@ -1,0 +1,12 @@
+main.contact form label {
+  display: block;
+  color: #707070;
+  margin-top: 20px; }
+
+main.contact form input, main.contact form textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-family: "Nunito Sans", "Helvetica", sans-serif;
+  font-size: 1em;
+  color: #333; }
