@@ -32,7 +32,7 @@ class UpdateSingle extends Component {
         {this.state.update.title === undefined ? <Spinner show={true}/> : null}
         <div className="container">
           <h2>{this.state.update.title}</h2>
-          <h5>
+          <h5 className={this.state.update.createdAt ? "" : "hidden"}>
             <span className="date">{Humandate.relativeTime(this.state.update.createdAt)}</span> - <ul className="themes-list">{Themes}</ul>
           </h5>
           <img alt={this.state.update.teaser} src={this.state.update.image}/>
