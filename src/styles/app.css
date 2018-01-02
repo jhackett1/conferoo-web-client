@@ -57,6 +57,16 @@ a.button, button {
     animation: loading 2s linear infinite;
     transition: 0.1s; }
 
+h5.notice {
+  font-size: 2em;
+  color: #707070;
+  text-align: center;
+  margin: 40px 0px 10px 0px; }
+
+p.notice {
+  color: #969696;
+  text-align: center; }
+
 .hidden {
   display: none; }
 

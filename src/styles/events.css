@@ -1,16 +1,67 @@
 main.events ul.events-navigation {
   border-bottom: 1px solid #cfcfcf;
-  margin-bottom: 10px; }
+  margin: 25px 0px 30px 0px; }
   main.events ul.events-navigation li {
     display: inline-block;
-    padding: 15px 20px 15px 0px;
+    margin-right: 15px;
     font-size: 0.9em; }
     main.events ul.events-navigation li a {
+      display: inline-block;
       color: #707070;
-      text-decoration: none; }
+      padding-bottom: 12px;
+      text-decoration: none;
+      border-bottom: 5px solid #f6f6f6; }
+      main.events ul.events-navigation li a.active {
+        border-bottom: 5px solid #4a6bf6;
+        pointer-events: none; }
       main.events ul.events-navigation li a:hover {
         text-decoration: underline; }
 
+main.events ul.events-list {
+  margin-top: 20px; }
+  main.events ul.events-list li.event-item {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 1px;
+    overflow: hidden;
+    cursor: pointer; }
+    main.events ul.events-list li.event-item a {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      text-decoration: none; }
+      main.events ul.events-list li.event-item a div.image {
+        width: 25%;
+        height: 150px;
+        flex: 1;
+        background-position: center;
+        background-size: cover; }
+      main.events ul.events-list li.event-item a aside {
+        width: 75%;
+        padding: 15px;
+        flex: 1; }
+        main.events ul.events-list li.event-item a aside h5 {
+          color: #969696;
+          margin-bottom: 3px; }
+        main.events ul.events-list li.event-item a aside h3 {
+          font-size: 1.2em; }
+        main.events ul.events-list li.event-item a aside p {
+          color: #969696;
+          margin-top: 3px;
+          font-size: 0.9em; }
+
 @media screen and (min-width: 600px) {
   main.events ul.events-navigation li {
-    font-size: 1em; } }
+    font-size: 1em; }
+  main.events ul.events-list li.event-item a div.image {
+    width: 15%;
+    height: 150px;
+    flex: 1; }
+  main.events ul.events-list li.event-item a aside {
+    padding: 20px;
+    flex: 2; }
+    main.events ul.events-list li.event-item a aside h3 {
+      font-size: 1.4em; } }

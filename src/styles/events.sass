@@ -3,19 +3,72 @@
 main.events
   ul.events-navigation
     border-bottom: 1px solid $grey4
-    margin-bottom: 10px
+    margin: 25px 0px 30px 0px
     li
       display: inline-block
-      padding: 15px 20px 15px 0px
+      margin-right: 15px
       font-size: 0.9em
       a
+        display: inline-block
         color: $grey2
+        padding-bottom: 12px
         text-decoration: none
+        border-bottom: 5px solid $grey5
+        &.active
+          border-bottom: 5px solid $blue
+          pointer-events: none
         &:hover
           text-decoration: underline
+  ul.events-list
+    margin-top: 20px
+    li.event-item
+      width: 100%
+      margin-bottom: 20px
+      background-color: $white
+      position: relative
+      border-radius: 1px
+      overflow: hidden
+      cursor: pointer
+      a
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: center
+        text-decoration: none
+        div.image
+          width: 25%
+          height: 150px
+          flex: 1
+          background-position: center
+          background-size: cover
+        aside
+          width: 75%
+          padding: 15px
+          flex: 1
+          h5
+            color: $grey3
+            margin-bottom: 3px
+          h3
+            font-size: 1.2em
+          p
+            color: $grey3
+            margin-top: 3px
+            font-size: 0.9em
 
 @media screen and (min-width: 600px)
   main.events
     ul.events-navigation
       li
         font-size: 1em
+    ul.events-list
+      li.event-item
+        a
+          div.image
+            width: 15%
+            height: 150px
+            flex: 1
+          aside
+            padding: 20px
+            flex: 2
+            h3
+              font-size: 1.4em

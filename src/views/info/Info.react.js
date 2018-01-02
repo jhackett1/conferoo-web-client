@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
-import infoApi from '../../services/info';
 import '../../styles/info.css';
 import Spinner from  '../../partials/Spinner.react';
+
+// Flux
+import * as infoActions from '../../actions/infoActions';
+import infoStore from '../../stores/infoStore';
 
 class Info extends Component {
   constructor(props){
     super(props);
     this.state = {
-      pages: [],
+      pages: infoStore.getAll(),
       selected: ''
     };
+    // Handle changes in store
+    this.onChange = () => {
+      this.setState({
+        pages: infoStore.getAll()
+      });
+    }
   }
 
   componentWillMount(){
-    infoApi.getPages((err, pages)=>{
-      if(err) return;
-      this.setState({pages: pages})
-    })
+    // Trigger data fetch
+    infoActions.fetchInfo();
+    // Subscribe state to store changes
+    infoStore.on('change', this.onChange);
+  }
+
+  componentWillUnmount(){
+    // Unsubscribe from store on component unmount
+    infoStore.removeListener('change', this.onChange)
   }
 
   render() {
@@ -32,7 +46,7 @@ class Info extends Component {
 
     return (
       <main className="info">
-        {this.state.pages.length === 0 ? <Spinner show={true}/> : null}      
+        {this.state.pages.length === 0 ? <Spinner show={true}/> : null}
         <div className="container">
           <h2>Info</h2>
           <p>Everything you need to know about the conference.</p>
