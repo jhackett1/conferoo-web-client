@@ -1,35 +1,72 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import EventListItem from './EventListItem.react';
+
+import config from '../../config';
 
 class EventsList extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      themeFilter: 'all',
+      venueFilter: 'all'
+    }
+  }
+
   render() {
-    const AllEvents = this.props.events.map((event)=>{
-      let image;
-      if(event.preview){
-        image = `url(${event.preview})`;
-      } else if(event.medium){
-        image = `url(${event.medium})`;
-      } else {
-        image = `url(${event.image})`;
-      }
-      return(
-        <li className="event-item" key={event._id}>
-          <Link to={`/events/${event._id}`}>
-            <div className="image" style={{backgroundImage: image}}/>
-            <aside>
-              <h5>{event.time}</h5>
-              <h3>{event.title}</h3>
-              <p>{event.teaser}</p>
-            </aside>
-          </Link>
-        </li>
+    const venueOptions = config.venues.map((venue)=>{
+      return (
+        <option key={venue} value={venue}>{venue}</option>
       )
+    })
+    const themeOptions = config.themes.map((theme)=>{
+      return (
+        <option key={theme} value={theme}>{theme}</option>
+      )
+    })
+
+    const NoResults = () => {
+      return (
+        <div className="message">
+        <h5 className="notice">{"No results"}</h5>
+        <p className="notice">Try removing some filters.</p>
+        </div>
+      )
+    }
+
+    // Apply the selected filters to the results
+    let filteredEvents = this.props.events
+      .filter((event)=>{
+        return this.state.themeFilter === 'all' || event.themes.includes(this.state.themeFilter);
+      })
+      .filter((event)=>{
+        return this.state.venueFilter === 'all' || event.venue === this.state.venueFilter;
+      })
+
+    const AllEvents = filteredEvents.map((event, i)=>{
+      return(
+        <EventListItem key={event._id} data={event} index={i} events={filteredEvents} agenda={this.props.agenda}/>
+      )
+
     });
 
     return (
-          <ul className="events-list">
-            {AllEvents}
-          </ul>
+      <div>
+        <select type="select" onChange={(e)=>{
+          this.setState({venueFilter: e.target.value})
+        }}>
+          <option value='all'>All venues</option>
+          {venueOptions}
+        </select>
+        <select type="select" onChange={(e)=>{
+          this.setState({themeFilter: e.target.value})
+        }}>
+          <option value='all'>All themes</option>
+          {themeOptions}
+        </select>
+        <ul className="events-list">
+          {(filteredEvents.length < 1 && (this.state.themeFilter !== 'all' || this.state.venueFilter !== 'all' )) ? <NoResults/> : AllEvents}
+        </ul>
+      </div>
     );
   }
 }

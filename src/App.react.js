@@ -8,6 +8,7 @@ import './styles/app.css';
 import UpdateList from './views/updates/UpdateList.react';
 import UpdateSingle from './views/updates/UpdateSingle.react';
 import Events from './views/events/Events.react';
+import Polls from './views/polls/Polls.react';
 import Info from './views/info/Info.react';
 import Contact from './views/Contact.react';
 
@@ -22,6 +23,7 @@ class App extends Component {
         <Route exact path="/updates" component={UpdateList}/>
 
         <Route path="/events" component={Events}/>
+        <Route path="/polls" component={Polls}/>
 
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>

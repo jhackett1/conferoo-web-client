@@ -39,16 +39,25 @@ class UpdateSingle extends Component {
         <li key={theme}>{theme}</li>
       );
 
+      let image;
+      if(this.state.update.medium){
+        image = `url(${this.state.update.medium})`;
+      } else {
+        image = `url(${this.state.update.image})`;
+      }
+
       return (
         <main className="update-single">
           {this.state.update.title === undefined ? <Spinner show={true}/> : null}
           <div className="container">
             <h2>{this.state.update.title}</h2>
             <h5 className={this.state.update.createdAt ? "" : "hidden"}>
-              <span className="date">{Humandate.relativeTime(this.state.update.createdAt)}</span> - <ul className="themes-list">{Themes}</ul>
+              {Humandate.relativeTime(this.state.update.createdAt)}
             </h5>
-            <img alt={this.state.update.teaser} src={this.state.update.image}/>
+            <div className="image" style={{backgroundImage: image}}/>
             <article dangerouslySetInnerHTML={{__html: this.state.update.content}}></article>
+            <hr/>
+            <ul className="themes-list">In {Themes}</ul>
           </div>
         </main>
       );

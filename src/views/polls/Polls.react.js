@@ -1,0 +1,49 @@
+import React, { Component } from 'react';
+import Spinner from  '../../partials/Spinner.react';
+
+// Flux
+import * as pollActions from '../../actions/pollActions';
+import pollsStore from '../../stores/pollsStore';
+
+class Polls extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      polls: pollsStore.getAll()
+    };
+    // Handle changes in store
+    this.onChange = () => {
+      this.setState({
+        polls: pollsStore.getAll()
+      });
+    }
+  }
+
+  componentWillMount(){
+    // Trigger data fetch
+    pollActions.fetchPolls();
+    // Subscribe state to store changes
+    pollsStore.on('change', this.onChange);
+  }
+
+  componentWillUnmount(){
+    // Unsubscribe from store on component unmount
+    pollsStore.removeListener('change', this.onChange)
+  }
+
+  render() {
+    return (
+      <main className="polls">
+        {this.state.polls.length === 0 ? <Spinner show={true}/> : null}
+        <div className="container">
+          <h2>Polls</h2>
+          <p>Pose questions to speakers and provide feedback.</p>
+          <ul className="polls-list">
+          </ul>
+        </div>
+      </main>
+    );
+  }
+}
+
+export default Polls;

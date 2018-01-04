@@ -1,19 +1,39 @@
+main.update-single div.image {
+  max-width: 100%;
+  height: 0px;
+  padding-bottom: 50%;
+  background-position: center;
+  background-size: cover;
+  margin: 30px auto;
+  border-radius: 1px; }
+
 main.update-single img {
   width: 100%;
   margin: 10px auto; }
 
+main.update-single ul.themes-list {
+  margin: 25px 0px 0px 0px;
+  color: #969696; }
+  main.update-single ul.themes-list li {
+    display: inline-block;
+    margin-left: 10px;
+    color: #4a6bf6;
+    border: 1px solid #4a6bf6;
+    padding: 2px 5px;
+    font-size: 0.8em;
+    border-radius: 1px; }
+
+main.update-single h2 {
+  font-size: 2.2em;
+  line-height: 1.2em;
+  margin: 0; }
+
 main.update-single h5 {
-  color: #969696;
-  font-size: 1em;
-  margin-bottom: 10px; }
-  main.update-single h5 ul.themes-list {
-    margin-bottom: 10px;
-    display: inline; }
-    main.update-single h5 ul.themes-list li {
-      display: inline;
-      color: #4a6bf6;
-      font-size: 0.9em;
-      margin-right: 5px; }
+  margin: 5px 0px;
+  font-size: 1.1em;
+  color: #969696; }
+  main.update-single h5 span {
+    color: #707070; }
 
 main.update-single p {
   font-size: 1.1em;

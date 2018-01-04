@@ -1,3 +1,14 @@
+main.events select {
+  margin: 0px 10px 10px 0px;
+  border-radius: 1px;
+  background-color: #ffffff;
+  border: none;
+  color: #707070;
+  font-family: "Nunito Sans", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  padding: 5px;
+  display: inline-block; }
+
 main.events ul.events-navigation {
   border-bottom: 1px solid #cfcfcf;
   margin: 25px 0px 30px 0px; }
@@ -13,20 +24,31 @@ main.events ul.events-navigation {
       border-bottom: 5px solid #f6f6f6; }
       main.events ul.events-navigation li a.active {
         border-bottom: 5px solid #4a6bf6;
-        pointer-events: none; }
+        pointer-events: none;
+        text-decoration: none !important; }
       main.events ul.events-navigation li a:hover {
         text-decoration: underline; }
 
 main.events ul.events-list {
   margin-top: 20px; }
+  main.events ul.events-list span.time-label {
+    display: inline-block;
+    margin: 10px auto;
+    color: #707070; }
   main.events ul.events-list li.event-item {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #ffffff;
     position: relative;
     border-radius: 1px;
     overflow: hidden;
     cursor: pointer; }
+    main.events ul.events-list li.event-item i {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 15px;
+      color: #4a6bf6; }
     main.events ul.events-list li.event-item a {
       display: flex;
       flex-direction: row;
@@ -38,7 +60,8 @@ main.events ul.events-list {
         height: 150px;
         flex: 1;
         background-position: center;
-        background-size: cover; }
+        background-size: cover;
+        border-radius: 1px; }
       main.events ul.events-list li.event-item a aside {
         width: 75%;
         padding: 15px;
@@ -52,6 +75,38 @@ main.events ul.events-list {
           color: #969696;
           margin-top: 3px;
           font-size: 0.9em; }
+
+main.events section.event-single {
+  padding: 0; }
+  main.events section.event-single ul.themes-list {
+    margin: 25px 0px 0px 0px;
+    color: #969696; }
+    main.events section.event-single ul.themes-list li {
+      display: inline-block;
+      margin-left: 10px;
+      color: #4a6bf6;
+      border: 1px solid #4a6bf6;
+      padding: 2px 5px;
+      font-size: 0.8em;
+      border-radius: 1px; }
+  main.events section.event-single h3 {
+    font-size: 2.2em;
+    margin: 5px 0px; }
+  main.events section.event-single h5 {
+    font-size: 1.1em;
+    color: #969696; }
+    main.events section.event-single h5 span {
+      color: #707070; }
+  main.events section.event-single div.image {
+    max-width: 100%;
+    height: 0px;
+    padding-bottom: 50%;
+    background-position: center;
+    background-size: cover;
+    margin: 20px auto; }
+  main.events section.event-single article {
+    color: #707070;
+    margin-bottom: 10px; }
 
 @media screen and (min-width: 600px) {
   main.events ul.events-navigation li {

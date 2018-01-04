@@ -20,6 +20,7 @@ p {
   color: #707070; }
 
 hr {
+  margin-top: 20px;
   border: none;
   border-bottom: 1px solid #cfcfcf;
   width: 100%; }
@@ -28,21 +29,30 @@ ul {
   list-style-type: none; }
 
 a.button, button {
+  display: inline-block;
   font-family: "Nunito Sans", "Helvetica", sans-serif;
   background-color: #4a6bf6;
-  padding: 10px;
+  text-decoration: none;
+  padding: 13px;
   font-size: 1em;
   border: none;
   border-radius: 1px;
   color: #ffffff;
-  margin-top: 10px;
+  margin: 10px 10px 10px 0px;
   min-width: 100px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.2s ease-in-out; }
+  a.button.orange, button.orange {
+    background-color: #f6682f; }
+  a.button:hover, button:hover {
+    filter: brightness(1.1); }
+  a.button i, button i {
+    margin-right: 7px; }
 
 .spinner {
   height: 5px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: calc(36px + 98px);
   overflow: hidden;
   background-color: rgba(207, 207, 207, 0.2); }
@@ -66,6 +76,9 @@ h5.notice {
 p.notice {
   color: #969696;
   text-align: center; }
+
+#toast-container > div {
+  border-radius: 1px !important; }
 
 .hidden {
   display: none; }
@@ -113,15 +126,21 @@ header {
         opacity: 0.5; }
 
 nav ul {
-  border-bottom: 1px solid #cfcfcf;
-  margin-bottom: 10px; }
+  border-bottom: 1px solid #cfcfcf; }
   nav ul li {
     display: inline-block;
-    padding: 15px 20px 15px 0px;
-    font-size: 1.1em; }
+    padding-right: 20px;
+    font-size: 1em; }
     nav ul li a {
+      display: inline-block;
+      padding: 5px 0px 15px 0px;
       color: #707070;
-      text-decoration: none; }
+      text-decoration: none;
+      border-bottom: 4px solid #f6f6f6; }
+      nav ul li a.active {
+        border-bottom: 4px solid #4a6bf6;
+        pointer-events: none;
+        text-decoration: none !important; }
       nav ul li a:hover {
         text-decoration: underline; }
 
@@ -166,7 +185,10 @@ section.banner {
 
 @media screen and (min-width: 600px) {
   nav ul {
-    margin-bottom: 25px; }
+    margin-bottom: 20px; }
+    nav ul li {
+      margin-top: 10px;
+      font-size: 1.1em; }
   main h2 {
     font-size: 2.5em; }
   a.button, button {
@@ -176,4 +198,4 @@ section.banner {
 
 @media screen and (min-width: 1300px) {
   nav ul {
-    margin-bottom: 40px; } }
+    margin-bottom: 30px; } }

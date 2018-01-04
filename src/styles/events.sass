@@ -1,6 +1,20 @@
 @import 'variables.sass'
 
 main.events
+
+  select
+    margin: 0px 10px 10px 0px
+    border-radius: 1px
+    background-color: $white
+    // outline: none
+    // -webkit-appearance: none
+    border: none
+    color: $grey2
+    font-family: $font-stack
+    font-size: 0.9em
+    padding: 5px
+    display: inline-block
+
   ul.events-navigation
     border-bottom: 1px solid $grey4
     margin: 25px 0px 30px 0px
@@ -17,18 +31,29 @@ main.events
         &.active
           border-bottom: 5px solid $blue
           pointer-events: none
+          text-decoration: none !important
         &:hover
           text-decoration: underline
   ul.events-list
     margin-top: 20px
+    span.time-label
+      display: inline-block
+      margin: 10px auto
+      color: $grey2
     li.event-item
       width: 100%
-      margin-bottom: 20px
+      margin-bottom: 10px
       background-color: $white
       position: relative
       border-radius: 1px
       overflow: hidden
       cursor: pointer
+      i
+        position: absolute
+        bottom: 0
+        right: 0
+        padding: 15px
+        color: $blue
       a
         display: flex
         flex-direction: row
@@ -41,6 +66,7 @@ main.events
           flex: 1
           background-position: center
           background-size: cover
+          border-radius: 1px
         aside
           width: 75%
           padding: 15px
@@ -54,6 +80,37 @@ main.events
             color: $grey3
             margin-top: 3px
             font-size: 0.9em
+  section.event-single
+    padding: 0
+    ul.themes-list
+      margin: 25px 0px 0px 0px
+      color: $grey3
+      li
+        display: inline-block
+        margin-left: 10px
+        color: $blue
+        border: 1px solid $blue
+        padding: 2px 5px
+        font-size: 0.8em
+        border-radius: 1px
+    h3
+      font-size: 2.2em
+      margin: 5px 0px
+    h5
+      font-size: 1.1em
+      color: $grey3
+      span
+        color: $grey2
+    div.image
+      max-width: 100%
+      height: 0px
+      padding-bottom: 50%
+      background-position: center
+      background-size: cover
+      margin: 20px auto
+    article
+      color: $grey2
+      margin-bottom: 10px
 
 @media screen and (min-width: 600px)
   main.events

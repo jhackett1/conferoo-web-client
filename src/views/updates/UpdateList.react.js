@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import updatesApi from '../../services/updates';
 import Spinner from  '../../partials/Spinner.react';
 import '../../styles/updates.css';
 import { Link } from 'react-router-dom';

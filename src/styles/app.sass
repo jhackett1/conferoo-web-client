@@ -18,26 +18,36 @@ h1, h2, h3, h4, h5
 p
   color: $grey2
 hr
+  margin-top: 20px
   border: none
   border-bottom: 1px solid $grey4
   width: 100%
 ul
   list-style-type: none
 a.button, button
+  display: inline-block
   font-family: $font-stack
   background-color: $blue
-  padding: 10px
+  text-decoration: none
+  padding: 13px
   font-size: 1em
   border: none
   border-radius: 1px
   color: $white
-  margin-top: 10px
+  margin: 10px 10px 10px 0px
   min-width: 100px
   cursor: pointer
+  transition: 0.2s ease-in-out
+  &.orange
+    background-color: $orange
+  &:hover
+    filter: brightness(1.1)
+  i
+    margin-right: 7px
 .spinner
   height: 5px
   width: 100%
-  position: fixed
+  position: absolute
   top: calc(36px + 98px)
   // left: 0px
   overflow: hidden
@@ -62,9 +72,15 @@ p.notice
   color: $grey3
   text-align: center
 
+#toast-container > div
+  border-radius: 1px !important
+
 
 .hidden
   display: none
+
+
+
 
 // Animation
 @keyframes fadeIn
@@ -115,14 +131,20 @@ header
 nav
   ul
     border-bottom: 1px solid $grey4
-    margin-bottom: 10px
     li
       display: inline-block
-      padding: 15px 20px 15px 0px
-      font-size: 1.1em
+      padding-right: 20px
+      font-size: 1em
       a
+        display: inline-block
+        padding: 5px 0px 15px 0px
         color: $grey2
         text-decoration: none
+        border-bottom: 4px solid $grey5
+        &.active
+          border-bottom: 4px solid $blue
+          pointer-events: none
+          text-decoration: none !important
         &:hover
           text-decoration: underline
 
@@ -172,7 +194,10 @@ section.banner
 @media screen and (min-width: 600px)
   nav
     ul
-      margin-bottom: 25px
+      margin-bottom: 20px
+      li
+        margin-top: 10px
+        font-size: 1.1em
   main
     h2
       font-size: 2.5em
@@ -185,4 +210,4 @@ section.banner
 @media screen and (min-width: 1300px)
   nav
     ul
-      margin-bottom: 40px
+      margin-bottom: 30px
