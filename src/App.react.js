@@ -5,6 +5,7 @@ import Footer from './partials/Footer.react';
 import { Route } from 'react-router-dom';
 import './styles/app.css';
 
+import Dashboard from './views/Dashboard.react';
 import UpdateList from './views/updates/UpdateList.react';
 import UpdateSingle from './views/updates/UpdateSingle.react';
 import Events from './views/events/Events.react';
@@ -24,10 +25,12 @@ class App extends Component {
 
         <Route path="/events" component={Events}/>
         <Route path="/polls" component={Polls}/>
-
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>
-        <Footer/>
+
+        <Route exact path="/" component={Dashboard}/>
+
+        <Route component={Footer} />
       </div>
     );
   }

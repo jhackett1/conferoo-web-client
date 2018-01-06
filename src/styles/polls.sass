@@ -1,0 +1,34 @@
+@import 'variables.sass'
+
+main.polls
+  ul.polls-list
+    margin-top: 20px
+    li
+      width: 100%
+      margin-bottom: 10px
+      background-color: $white
+      position: relative
+      border-radius: 1px
+      overflow: hidden
+      padding: 20px
+      h5
+        color: $grey3
+        margin-top: 20px
+        font-size: 0.8em
+      &.open
+        form
+          width: 100%
+          // background-color: red
+          display: flex
+          flex-direction: row
+          margin-top: 10px
+          button
+            width: 70px
+            min-width: 80px
+            margin: 0
+            margin-left: 5px
+            padding: 10px
+          input
+            flex: 1
+            font-size: 1.2em
+            padding: 10px

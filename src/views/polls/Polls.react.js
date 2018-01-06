@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Spinner from  '../../partials/Spinner.react';
+import '../../styles/polls.css';
+import PollItem from './PollItem.react';
 
 // Flux
 import * as pollActions from '../../actions/pollActions';
@@ -32,6 +34,12 @@ class Polls extends Component {
   }
 
   render() {
+    const PollsList = this.state.polls.map((poll)=>{
+      return(
+        <PollItem poll={poll}/>
+      );
+    });
+
     return (
       <main className="polls">
         {this.state.polls.length === 0 ? <Spinner show={true}/> : null}
@@ -39,6 +47,7 @@ class Polls extends Component {
           <h2>Polls</h2>
           <p>Pose questions to speakers and provide feedback.</p>
           <ul className="polls-list">
+            {PollsList}
           </ul>
         </div>
       </main>

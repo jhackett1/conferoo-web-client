@@ -37,7 +37,7 @@ class EventListItem extends Component {
               <h3>{event.title}</h3>
               <p>{event.teaser}</p>
             </aside>
-            {(this.props.agenda.includes(event._id))? <i class="fa fa-bookmark"></i> : <i class="fa fa-bookmark-o"></i> }
+            {(this.props.agenda.includes(event._id))? <i className="fa fa-bookmark"></i> : <i className="fa fa-bookmark-o"></i> }
           </Link>
         </li>
       </div>

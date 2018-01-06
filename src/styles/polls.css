@@ -1,0 +1,29 @@
+main.polls ul.polls-list {
+  margin-top: 20px; }
+  main.polls ul.polls-list li {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 1px;
+    overflow: hidden;
+    padding: 20px; }
+    main.polls ul.polls-list li h5 {
+      color: #969696;
+      margin-top: 20px;
+      font-size: 0.8em; }
+    main.polls ul.polls-list li.open form {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px; }
+      main.polls ul.polls-list li.open form button {
+        width: 70px;
+        min-width: 80px;
+        margin: 0;
+        margin-left: 5px;
+        padding: 10px; }
+      main.polls ul.polls-list li.open form input {
+        flex: 1;
+        font-size: 1.2em;
+        padding: 10px; }

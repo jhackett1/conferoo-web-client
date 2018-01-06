@@ -1,11 +1,13 @@
 @import 'variables.sass'
 
-main.login
+main.login, main.onboarding
   display: flex
   flex-direction: column
   justify-content: flex-start
   align-items: center
   max-height: 100vh
+  text-align: center
+
   div.branding
     display: flex
     width: 100%
@@ -15,6 +17,7 @@ main.login
     padding: 20px
     background-color: lighten($blue, 2)
     margin-bottom: 50px
+    text-align: left
     img
       max-height: 120px
       margin-right: 20px
@@ -26,10 +29,27 @@ main.login
         opacity: 0.5
   a.button
     margin-right: 0px
+  h2
+    max-width: 350px
+    font-size: 1.5em
   p
     font-size: 0.9em
-    margin: 20px auto 0px auto
+    margin: 20px auto
     text-align: center
     max-width: 600px
     a
       color: $blue
+  select
+    background-color: $white
+    border: none !important
+    border-radius: 0px
+    padding: 10px
+    font-size: 1em
+    color: $grey1
+    width: 100%
+    margin-top: 20px
+  label
+    display: block
+    color: $grey3
+    font-size: 0.9em
+    margin: 15px auto 30px auto
