@@ -25,6 +25,25 @@ const pollsApi = {
       .catch(function(err){
         cb(err, null)
       })
+  },
+
+
+  respond: function(id, response, cb){
+    Axios({
+      method: 'post',
+      url: host + 'polls/' + id + '/respond',
+      headers: {
+        Authorization: userService.getToken()
+      },
+      data: response
+    })
+      .then(function(response){
+        cb(null, response.data)
+
+      })
+      .catch(function(err){
+        cb(err, null)
+      })
   }
 
 }

@@ -18,6 +18,7 @@ class Polls extends Component {
       this.setState({
         polls: pollsStore.getAll()
       });
+      console.log('Polls controller view updated from store')
     }
   }
 
@@ -34,9 +35,13 @@ class Polls extends Component {
   }
 
   render() {
-    const PollsList = this.state.polls.map((poll)=>{
+    const PollsList = this.state.polls.map((poll, i)=>{
+      var animStyle = {
+        animationDelay: i*0.2 + 's'
+      }
+
       return(
-        <PollItem poll={poll}/>
+        <PollItem style={animStyle} poll={poll} key={poll._id}/>
       );
     });
 

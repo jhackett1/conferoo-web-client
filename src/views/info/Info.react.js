@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../styles/info.css';
 import Spinner from  '../../partials/Spinner.react';
+import Profile from './Profile.react';
 
 // Flux
 import * as infoActions from '../../actions/infoActions';
@@ -54,6 +55,8 @@ class Info extends Component {
           <ul className="pages-list">
             {PagesList}
           </ul>
+          <h3>My profile</h3>
+          <Profile/>
         </div>
       </main>
     );

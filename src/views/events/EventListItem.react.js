@@ -30,7 +30,7 @@ class EventListItem extends Component {
     return(
       <div>
         <Label/>
-        <li className="event-item" key={event._id}>
+        <li style={this.props.style} className="event-item" key={event._id}>
           <Link to={`/events/${event._id}`}>
             <div className="image" style={{backgroundImage: image}}/>
             <aside>

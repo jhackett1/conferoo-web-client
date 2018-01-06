@@ -10,3 +10,15 @@ export function fetchPolls(){
     })
   })
 }
+
+export function respondToPoll(id, response){
+  console.log(response)
+
+  pollsApi.respond(id, response, (err, response)=>{
+    if(err) return;
+    dispatcher.dispatch({
+      type: "RESPOND_TO_POLL_SUCCESS",
+      poll: response
+    })
+  })
+}

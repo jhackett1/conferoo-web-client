@@ -66,7 +66,7 @@ class EventSingle extends Component {
       );
 
       const Slides = () => (
-        <a href={this.state.event.slides} target="blank" className="button orange">Download slides</a>
+        <a href={this.state.event.slides} target="blank" className="button orange"><i className="fa fa-download"></i> Download slides</a>
       );
 
       return (
@@ -75,8 +75,8 @@ class EventSingle extends Component {
             <h3>{this.state.event.title}</h3>
             <h5> At <span>{this.state.event.time}</span> on <span>{this.state.event.programme}</span> in <span>{this.state.event.venue}</span></h5>
             <div className="image" style={{backgroundImage: image}}/>
-            <article dangerouslySetInnerHTML={{__html: this.state.event.content}}></article>
             {(this.state.agenda.includes(this.state.event._id))? <a onClick={this.removeFromAgenda} className="button"><i class="fa fa-bookmark"></i> Remove from agenda</a> : <a onClick={this.addToAgenda} className="button"><i class="fa fa-bookmark-o"></i> Add to agenda</a> }
+            <article dangerouslySetInnerHTML={{__html: this.state.event.content}}></article>
             {(this.state.event.slides ? <Slides/> : null)}
             <ul className="themes-list">In {Themes}</ul>
         </section>

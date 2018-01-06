@@ -43,8 +43,12 @@ class EventsList extends Component {
       })
 
     const AllEvents = filteredEvents.map((event, i)=>{
+      var animStyle = {
+        animationDelay: i*0.2 + 's'
+      }
+
       return(
-        <EventListItem key={event._id} data={event} index={i} events={filteredEvents} agenda={this.props.agenda}/>
+        <EventListItem style={animStyle} key={event._id} data={event} index={i} events={filteredEvents} agenda={this.props.agenda}/>
       )
 
     });

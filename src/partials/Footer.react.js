@@ -24,8 +24,8 @@ class Footer extends React.Component{
           <div className="container">
             <h3>About us</h3>
             <ul>
-              <li><Link to="/policies">Cookie policy</Link></li>
-              <li><Link to="/contact">Contact conference organisers</Link></li>
+              <li><Link to="/policies">Privacy policy</Link></li>
+              <li><Link to="/contact">Contact the organisers</Link></li>
               <li><a href="http://fsconference.co.uk">Website</a></li>
               <li><a onClick={this.logOut}>Log out</a></li>
             </ul>

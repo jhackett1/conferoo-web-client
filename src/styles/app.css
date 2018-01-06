@@ -41,6 +41,7 @@ a.button, button {
   margin: 10px 10px 10px 0px;
   min-width: 100px;
   cursor: pointer;
+  text-align: center;
   transition: 0.2s ease-in-out; }
   a.button.orange, button.orange {
     background-color: #f6682f; }
@@ -83,12 +84,6 @@ p.notice {
 .hidden {
   display: none; }
 
-@keyframes fadeIn {}from {
-  opacity: 0; }
-
-to {
-  opacity: 1; }
-
 @keyframes loading {
   from {
     left: -200px;
@@ -103,6 +98,14 @@ to {
     left: 120%; }
   to {
     left: 100%; } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px); }
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
 
 header {
   background-color: #4a6bf6;
@@ -182,6 +185,22 @@ section.banner {
       color: #f6f6f6; }
     section.banner .container img {
       margin-right: 15px; }
+
+main.policies h1 {
+  margin-bottom: 30px; }
+
+main.policies p {
+  margin-bottom: 20px; }
+
+main.policies h3 {
+  margin: 10px 0px; }
+
+main.policies ul {
+  margin: 20px;
+  list-style-type: disc; }
+  main.policies ul li {
+    padding-left: 10px;
+    margin-bottom: 5px; }
 
 @media screen and (min-width: 600px) {
   nav ul {

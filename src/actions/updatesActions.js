@@ -7,7 +7,7 @@ import 'toastr/build/toastr.css';
 
 export function fetchUpdates(){
   updatesApi.getUpdates((err, response)=>{
-    if(err) return toastr.error("Your session has expired.", "Please log out and back in.");;
+    if(err) return;
     dispatcher.dispatch({
       type: "FETCH_UPDATES_SUCCESS",
       updates: response

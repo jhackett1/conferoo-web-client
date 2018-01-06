@@ -12,6 +12,8 @@ import Events from './views/events/Events.react';
 import Polls from './views/polls/Polls.react';
 import Info from './views/info/Info.react';
 import Contact from './views/Contact.react';
+import Policies from './views/Policies.react';
+
 
 class App extends Component {
   render() {
@@ -27,6 +29,7 @@ class App extends Component {
         <Route path="/polls" component={Polls}/>
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>
+        <Route path="/policies" component={Policies}/>        
 
         <Route exact path="/" component={Dashboard}/>
 

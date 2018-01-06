@@ -35,7 +35,12 @@ class UpdateList extends Component {
 
   render() {
 
-    const UpdatesList = this.state.updates.map((update)=>{
+    const UpdatesList = this.state.updates.map((update, i)=>{
+
+      var animStyle = {
+        animationDelay: i*0.2 + 's'
+      }
+
       let image;
       if(update.medium){
         image = `url(${update.medium})`;
@@ -43,7 +48,7 @@ class UpdateList extends Component {
         image = `url(${update.image})`;
       }
       return(
-        <li className='update-item' key={update._id}>
+        <li style={animStyle} className='update-item' key={update._id}>
           <Link to={`/update/${update._id}`}>
             <div className="image" style={{backgroundImage: image}}/>
             <aside>

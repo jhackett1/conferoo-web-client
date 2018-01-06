@@ -11,10 +11,63 @@ main.polls
       border-radius: 1px
       overflow: hidden
       padding: 20px
+      animation: fadeInUp 0.2s ease-out
+      animation-fill-mode: forwards
+      opacity: 0      
+      h3
+        margin-bottom: 5px
       h5
         color: $grey3
-        margin-top: 20px
+        margin-top: 15px
         font-size: 0.8em
+      p.already-participated
+        font-style: italic
+        font-size: 0.9em
+        color: $grey3
+        margin-top: 10px
+      ul.themes-list
+        display: inline
+        margin: 0px
+        color: $grey3
+        li
+          display: inline
+          margin: 0px 5px
+          color: $blue
+          border: 1px solid $blue
+          padding: 2px 5px
+          font-size: 0.8em
+          border-radius: 1px
+      &.multiple-choice
+        ul.options
+          margin-top: 10px
+          a.button
+            font-size: 0.9em
+            padding: 10px
+        ul.results
+          // border: 1px dotted green
+          li
+            padding: 0px
+            margin: 0px
+            &:last-of-type
+              margin-bottom: 20px
+            @keyframes grow
+              from
+                transform: scaleX(0.1)
+              to
+                transform: scaleX(1)
+            div
+              background-color: $blue
+              padding: 5px
+              border-radius: 1px
+              min-width: 40px
+              color: $white
+              font-size: 0.9em
+              animation: grow 1s ease-in-out
+              transform-origin: left
+              &.winner
+                background-color: $orange
+
+
       &.open
         form
           width: 100%
@@ -32,3 +85,5 @@ main.polls
             flex: 1
             font-size: 1.2em
             padding: 10px
+            font-family: $font-stack
+            color: $grey1
