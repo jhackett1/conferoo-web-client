@@ -18,7 +18,7 @@
     "react-scripts": "1.0.17",
     "react-transition-group": "^1.2.1",
     "react-validation": "^3.0.7",
-    "require-from-string": "^2.0.2",
+    "require-from-string": "^2.0.1",
     "simple-react-validator": "0.0.6",
     "toastr": "^2.1.4"
   },
