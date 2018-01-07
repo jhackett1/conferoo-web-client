@@ -62,9 +62,7 @@ class LoginCallback extends Component {
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.send(JSON.stringify({
       code: postData,
-      // redirectUri: 'http://localhost:3000/login/callback',
-      redirectUri: 'https://conferoo-web-client.herokuapp.com/login/callback',
-      // redirectUri: 'https://fsconference.co.uk/login/callback',
+      redirectUri: config.login_redirect_uri,
       clientId: config.google_client_id
     }));
   }

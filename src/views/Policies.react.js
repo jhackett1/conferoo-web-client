@@ -1,6 +1,10 @@
 import React from 'react';
 
 class Policies extends React.Component{
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+  
   render(){
     return(
       <main className="policies">

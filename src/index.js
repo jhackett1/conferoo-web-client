@@ -27,7 +27,6 @@ class Index extends React.Component{
     )}/>
   );
 
-
     return (
       <Router>
         <Switch>

@@ -5,7 +5,6 @@ import Footer from './partials/Footer.react';
 import { Route } from 'react-router-dom';
 import './styles/app.css';
 
-import Dashboard from './views/Dashboard.react';
 import UpdateList from './views/updates/UpdateList.react';
 import UpdateSingle from './views/updates/UpdateSingle.react';
 import Events from './views/events/Events.react';
@@ -13,7 +12,6 @@ import Polls from './views/polls/Polls.react';
 import Info from './views/info/Info.react';
 import Contact from './views/Contact.react';
 import Policies from './views/Policies.react';
-
 
 class App extends Component {
   render() {

@@ -19,6 +19,10 @@ class Contact extends Component {
     }
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }  
+
   componentWillMount(){
     document.title = "Contact | Fast Stream Conference 2018";
   }

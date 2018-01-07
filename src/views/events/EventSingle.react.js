@@ -26,6 +26,10 @@ class EventSingle extends Component {
     this.removeFromAgenda = this.removeFromAgenda.bind(this);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   componentWillMount(){
     // Trigger data fetch
     eventsActions.fetchEvents();

@@ -22,6 +22,11 @@ class UpdateSingle extends Component {
     }
   }
 
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   componentWillMount(){
     // Trigger data fetch
     updatesActions.fetchUpdates();

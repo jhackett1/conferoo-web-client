@@ -22,12 +22,16 @@ class Info extends Component {
     }
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   componentWillMount(){
     // Trigger data fetch
     infoActions.fetchInfo();
     // Subscribe state to store changes
     infoStore.on('change', this.onChange);
-    document.title = "Info | Fast Stream Conference 2018";  
+    document.title = "Info | Fast Stream Conference 2018";
   }
 
   componentWillUnmount(){

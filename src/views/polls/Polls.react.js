@@ -21,6 +21,10 @@ class Polls extends Component {
     }
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   componentWillMount(){
     // Trigger data fetch
     pollActions.fetchPolls();
