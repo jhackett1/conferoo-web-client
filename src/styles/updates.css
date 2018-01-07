@@ -41,6 +41,9 @@ main.update-single p {
   main.update-single p a {
     color: #4a6bf6; }
 
+main.update-single article {
+  margin: 30px auto; }
+
 @media screen and (min-width: 500px) {
   main.update-single h2 {
     font-size: 3em; } }

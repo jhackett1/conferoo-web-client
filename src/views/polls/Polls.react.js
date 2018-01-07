@@ -18,7 +18,6 @@ class Polls extends Component {
       this.setState({
         polls: pollsStore.getAll()
       });
-      console.log('Polls controller view updated from store')
     }
   }
 
@@ -27,6 +26,7 @@ class Polls extends Component {
     pollActions.fetchPolls();
     // Subscribe state to store changes
     pollsStore.on('change', this.onChange);
+    document.title = "Polls | Fast Stream Conference 2018";
   }
 
   componentWillUnmount(){

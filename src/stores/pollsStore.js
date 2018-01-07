@@ -12,6 +12,10 @@ class PollsStore extends EventEmitter {
     return this.polls;
   }
 
+  getLatest(){
+    return this.polls[0];
+  }
+
   // Update store
   fetchPolls(newPolls){
     this.polls = newPolls;
@@ -19,8 +23,6 @@ class PollsStore extends EventEmitter {
   }
 
   updatePoll(updatedPoll){
-    console.log('Store updating polls from server')
-
     for(var i in this.polls){
       if (this.polls[i]._id === updatedPoll._id) {
         this.polls[i] = updatedPoll;

@@ -17,7 +17,10 @@ class Contact extends Component {
       email: '',
       message: ''
     }
+  }
 
+  componentWillMount(){
+    document.title = "Contact | Fast Stream Conference 2018";
   }
 
   handleChange = (e) => {

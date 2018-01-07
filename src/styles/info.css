@@ -16,7 +16,7 @@ main.info section.user-profile {
     margin-top: 3px; }
 
 main.info ul.pages-list {
-  margin-top: 20px; }
+  margin: 20px 0px 40px 0px; }
   main.info ul.pages-list li.page-item {
     display: block;
     padding: 15px;

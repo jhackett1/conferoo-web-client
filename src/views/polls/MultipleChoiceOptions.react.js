@@ -1,5 +1,4 @@
 import React from 'react';
-import pollsApi from '../../services/polls';
 import userService from '../../services/userService';
 import MultipleChoiceResults from './MultipleChoiceResults.react';
 
@@ -22,7 +21,7 @@ class Option extends React.Component{
 
   render(){
     return(
-      <a className="button" onClick={this.handleSubmit}>{this.props.val}</a>
+      <a className="button grey" onClick={this.handleSubmit}>{this.props.val}</a>
     )
   }
 }

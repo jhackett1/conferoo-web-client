@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../styles/login.css';
 
 import config from '../../config';
@@ -10,6 +10,10 @@ class Login extends React.Component{
     const url = "https://accounts.google.com/o/oauth2/v2/auth?" + urlBuilder.join('&');
     // Open the popup window
     window.location.href = url;
+  }
+
+  componentWillMount(){
+    document.title = "Fast Stream Conference 2018";
   }
 
   render(){

@@ -8,7 +8,7 @@ class Nav extends React.Component{
       <nav>
         <div className="container">
           <ul>
-            <li><NavLink to="/updates">Updates</NavLink></li>
+            <li><NavLink exact to="/">Updates</NavLink></li>
             <li><NavLink to="/events">Events</NavLink></li>
             <li><NavLink to="/polls">Polls</NavLink></li>
             <li><NavLink to="/info">Info</NavLink></li>

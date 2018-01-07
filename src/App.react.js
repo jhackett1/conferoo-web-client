@@ -23,15 +23,13 @@ class App extends Component {
         <Header/>
 
         <Route exact path="/update/:id" component={UpdateSingle}/>
-        <Route exact path="/updates" component={UpdateList}/>
+        <Route exact path="/" component={UpdateList}/>
 
         <Route path="/events" component={Events}/>
         <Route path="/polls" component={Polls}/>
         <Route path="/info" component={Info}/>
         <Route path="/contact" component={Contact}/>
-        <Route path="/policies" component={Policies}/>        
-
-        <Route exact path="/" component={Dashboard}/>
+        <Route path="/policies" component={Policies}/>
 
         <Route component={Footer} />
       </div>

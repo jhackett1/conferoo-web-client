@@ -1,0 +1,55 @@
+@import 'variables.sass'
+
+main.dashboard
+  h3
+    margin: 10px 0px
+  div.latest-poll, div.latest-update
+    padding: 20px
+    margin-bottom: 20px
+    background-color: $white
+    h4
+      font-size: 1.2em
+    a
+      margin-top: 20px
+  ul.speaker-list
+    display: flex
+    flex-direction: row
+    li
+      flex: 1
+      background-color: $white
+      margin-bottom: 20px
+      border-radius: 1px
+      overflow: hidden
+      text-align: center
+      padding: 20px
+      margin-right: 20px
+      &:last-of-type
+        margin-right: 0px
+      div
+        height: 80px
+        width: 80px
+        border-radius: 100px
+        background-position: center
+        background-size: cover
+        background-color: $grey4
+        margin: 0px auto 10px auto
+      aside
+
+        h4
+          font-size: 1.2em
+          margin-bottom: 5px
+
+@media screen and (min-width: 600px)
+  main.dashboard
+    section.side-by-side
+      display: flex
+      flex-direction: row
+      aside
+        display: flex
+        flex-direction: column
+        flex: 1
+        width: 50%
+        div
+          flex: 1
+        &:first-of-type
+          margin-right: 20px

@@ -4,7 +4,7 @@ import App from './App.react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import userService from './services/userService';
-
+import ReactGA from 'react-ga';
 
 import Login from './views/login/Login.react';
 import LoginCallback from './views/login/LoginCallback.react';
@@ -42,5 +42,9 @@ class Index extends React.Component{
 }
 
 ReactDOM.render(<Index/>, document.getElementById('root'));
+
+// Analytics
+ReactGA.initialize('UA-91311733-4');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 registerServiceWorker();

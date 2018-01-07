@@ -26,6 +26,7 @@ class UpdateList extends Component {
     updatesActions.fetchUpdates();
     // Subscribe state to store changes
     updatesStore.on('change', this.onChange);
+    document.title = "Updates | Fast Stream Conference 2018";
   }
 
   componentWillUnmount(){

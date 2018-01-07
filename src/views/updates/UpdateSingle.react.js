@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Spinner from  '../../partials/Spinner.react';
 import '../../styles/updates.css';
 import Humandate from 'human-date';
+import Speaker from '../../partials/Speaker.react';
 
 // Flux
 import * as updatesActions from '../../actions/updatesActions';
@@ -47,6 +48,7 @@ class UpdateSingle extends Component {
       }
 
       return (
+
         <main className="update-single">
           {this.state.update.title === undefined ? <Spinner show={true}/> : null}
           <div className="container">
@@ -56,6 +58,7 @@ class UpdateSingle extends Component {
             </h5>
             <div className="image" style={{backgroundImage: image}}/>
             <article dangerouslySetInnerHTML={{__html: this.state.update.content}}></article>
+            <Speaker id={this.state.update.author}/>
             <hr/>
             <ul className="themes-list">In {Themes}</ul>
           </div>

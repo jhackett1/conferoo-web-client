@@ -81,6 +81,8 @@ main.events ul.events-list {
 
 main.events section.event-single {
   padding: 0; }
+  main.events section.event-single a.orange {
+    margin-bottom: 0px; }
   main.events section.event-single ul.themes-list {
     margin: 15px 0px 0px 0px;
     color: #969696; }
@@ -109,7 +111,7 @@ main.events section.event-single {
     margin: 20px auto; }
   main.events section.event-single article {
     color: #707070;
-    margin: 15px 0px; }
+    margin: 30px 0px; }
 
 @media screen and (min-width: 600px) {
   main.events ul.events-navigation li {

@@ -25,7 +25,6 @@ class Events extends Component {
         events: eventsStore.getAll(),
         agenda: agendaStore.getAll()
       });
-      console.log(this.state.agenda)
     }
   }
 

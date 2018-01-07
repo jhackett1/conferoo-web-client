@@ -19,6 +19,10 @@ class UpdatesStore extends EventEmitter {
     })[0];
   }
 
+  getLatest(){
+    return this.updates[0];
+  }
+
   // Update store
   fetchUpdates(newUpdates){
     this.updates = newUpdates;

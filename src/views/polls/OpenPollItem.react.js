@@ -78,27 +78,7 @@ class PollItem extends Component {
         </li>
       );
     }
-
-
-    return(
-      <li className='poll-item open'>
-          <aside>
-            <h3>{poll.question}</h3>
-            <p>{poll.detail}</p>
-          </aside>
-          <form onSubmit={this.handleSubmit}>
-            <input type="text" value={this.state.response} onChange={this.handleChange}/>
-            <button type="submit">Send</button>
-          </form>
-          <h5 className={poll.createdAt ? "" : "hidden"}>
-            {Humandate.relativeTime(poll.createdAt)}
-          </h5>
-      </li>
-    );
-
   }
-
-
 }
 
 export default PollItem;

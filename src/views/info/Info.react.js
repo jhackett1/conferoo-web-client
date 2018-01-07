@@ -27,6 +27,7 @@ class Info extends Component {
     infoActions.fetchInfo();
     // Subscribe state to store changes
     infoStore.on('change', this.onChange);
+    document.title = "Info | Fast Stream Conference 2018";  
   }
 
   componentWillUnmount(){
@@ -55,7 +56,7 @@ class Info extends Component {
           <ul className="pages-list">
             {PagesList}
           </ul>
-          <h3>My profile</h3>
+          <h2>My profile</h2>
           <Profile/>
         </div>
       </main>

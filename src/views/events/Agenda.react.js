@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import EventListItem from './EventListItem.react';
 
 class Agenda extends Component {
+  componentWillMount(){
+    document.title = "My agenda | Fast Stream Conference 2018";
+  }
+
   render() {
 
     let agenda = this.props.events.filter((event)=>{

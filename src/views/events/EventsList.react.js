@@ -12,6 +12,10 @@ class EventsList extends Component {
     }
   }
 
+  componentWillMount(){
+    document.title = "All events | Fast Stream Conference 2018";
+  }
+
   render() {
     const venueOptions = config.venues.map((venue)=>{
       return (

@@ -12,11 +12,13 @@
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-ga": "^2.4.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "react-transition-group": "^1.2.1",
     "react-validation": "^3.0.7",
+    "require-from-string": "^2.0.2",
     "simple-react-validator": "0.0.6",
     "toastr": "^2.1.4"
   },

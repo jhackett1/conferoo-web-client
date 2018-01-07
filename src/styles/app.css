@@ -36,15 +36,17 @@ a.button, button {
   padding: 13px;
   font-size: 1em;
   border: none;
-  border-radius: 1px;
+  border-radius: 0px;
   color: #ffffff;
   margin: 10px 10px 10px 0px;
   min-width: 100px;
   cursor: pointer;
   text-align: center;
-  transition: 0.2s ease-in-out; }
+  transition: 0.2s ease-in-out;
+  border-bottom: 3px solid #0a30d0; }
   a.button.orange, button.orange {
-    background-color: #f6682f; }
+    background-color: #f6682f;
+    border-bottom: 3px solid #b73a08; }
   a.button:hover, button:hover {
     filter: brightness(1.1); }
   a.button i, button i {
@@ -81,8 +83,22 @@ p.notice {
 #toast-container > div {
   border-radius: 1px !important; }
 
+i.fa-circle-o-notch {
+  animation: spin 1s infinite;
+  color: #cfcfcf;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  font-size: 2em; }
+
 .hidden {
   display: none; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
 
 @keyframes loading {
   from {
@@ -170,6 +186,25 @@ main {
   main h2 {
     font-size: 2em;
     margin-bottom: 10px; }
+
+section.speaker {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  margin: 20px 0px 10px 0px; }
+  section.speaker h5.position {
+    font-size: 0.9em !important;
+    margin-bottom: 5px; }
+  section.speaker h4 {
+    font-size: 1.2em; }
+  section.speaker img.portrait {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    float: right;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-bottom: 20px; }
 
 section.banner {
   background-color: #627ff7;
