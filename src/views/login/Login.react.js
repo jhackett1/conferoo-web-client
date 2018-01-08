@@ -6,7 +6,7 @@ import config from '../../config';
 class Login extends React.Component{
   handleClick(){
     var urlBuilder = [];
-    urlBuilder.push('response_type=code', `client_id=${config.google_client_id}`, `redirect_uri=${config.hostname}login/callback`, 'scope=profile email');
+    urlBuilder.push('response_type=code', `client_id=${config.google_client_id}`, `redirect_uri=${window.location.origin}/login/callback`, 'scope=profile email');
     const url = "https://accounts.google.com/o/oauth2/v2/auth?" + urlBuilder.join('&');
     // Open the popup window
     window.location.href = url;
