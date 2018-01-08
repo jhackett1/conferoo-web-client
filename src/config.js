@@ -3,7 +3,8 @@ const config = {
   api_host: "https://www.fsconference.co.uk/api/",
   slack_webhook_url: "https://hooks.slack.com/services/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",
   // login_redirect_uri: 'http://localhost:3000/login/callback',
-  login_redirect_uri: 'https://conferoo-web-client.herokuapp.com/login/callback',
+  hostname: 'https://conferoo-web-client.herokuapp.com/',
+  // login_redirect_uri: 'https://conferoo-web-client.herokuapp.com/login/callback',
   // login_redirect_uri: 'https://fsconference.co.uk/login/callback',
   themes: [
     "Cybersecurity",

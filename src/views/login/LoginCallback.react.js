@@ -62,7 +62,7 @@ class LoginCallback extends Component {
     request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.send(JSON.stringify({
       code: postData,
-      redirectUri: config.login_redirect_uri,
+      redirectUri: config.hostname + "login/callback/",
       clientId: config.google_client_id
     }));
   }
