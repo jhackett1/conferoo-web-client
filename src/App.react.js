@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Banner from './partials/Banner.react';
 import Header from './partials/Header.react';
 import Footer from './partials/Footer.react';
+import OfflineBar from './partials/OfflineBar.react';
 import { Route } from 'react-router-dom';
 import './styles/app.css';
 
@@ -42,7 +43,7 @@ class App extends Component {
         <Route exact path="/" render={(routeProps) => (
           <UpdateList appLoading={this.appLoading} appLoaded={this.appLoaded}/>
         )}/>
-        <Route exact path="/events" render={(routeProps) => (
+        <Route path="/events" render={(routeProps) => (
           <Events appLoading={this.appLoading} appLoaded={this.appLoaded}/>
         )}/>
         <Route exact path="/polls" render={(routeProps) => (
@@ -56,6 +57,8 @@ class App extends Component {
         <Route path="/policies" component={Policies}/>
 
         <Route component={Footer} />
+
+        <OfflineBar show={false}/>
       </div>
     );
   }
