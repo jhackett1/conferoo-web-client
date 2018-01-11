@@ -14,18 +14,44 @@ import Contact from './views/Contact.react';
 import Policies from './views/Policies.react';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      isLoading: true
+    }
+    this.appLoaded = this.appLoaded.bind(this);
+    this.appLoading = this.appLoading.bind(this);
+  }
+
+  appLoading(){
+    this.setState({isLoading: true})
+  }
+
+  appLoaded(){
+    this.setState({isLoading: false})
+  }
+
   render() {
     return (
       <div className="App">
         <Banner/>
-        <Header/>
+        <Header loading={this.state.isLoading}/>
 
         <Route exact path="/update/:id" component={UpdateSingle}/>
-        <Route exact path="/" component={UpdateList}/>
 
-        <Route path="/events" component={Events}/>
-        <Route path="/polls" component={Polls}/>
-        <Route path="/info" component={Info}/>
+        <Route exact path="/" render={(routeProps) => (
+          <UpdateList appLoading={this.appLoading} appLoaded={this.appLoaded}/>
+        )}/>
+        <Route exact path="/events" render={(routeProps) => (
+          <Events appLoading={this.appLoading} appLoaded={this.appLoaded}/>
+        )}/>
+        <Route exact path="/polls" render={(routeProps) => (
+          <Polls appLoading={this.appLoading} appLoaded={this.appLoaded}/>
+        )}/>
+        <Route exact path="/info" render={(routeProps) => (
+          <Info appLoading={this.appLoading} appLoaded={this.appLoaded}/>
+        )}/>
+
         <Route path="/contact" component={Contact}/>
         <Route path="/policies" component={Policies}/>
 

@@ -4,7 +4,6 @@ import { NavLink, Switch, Route } from 'react-router-dom';
 import EventsList from './EventsList.react';
 import EventSingle from './EventSingle.react';
 import Agenda from './Agenda.react';
-import Spinner from  '../../partials/Spinner.react';
 
 // Flux
 import * as eventsActions from '../../actions/eventsActions';
@@ -25,6 +24,8 @@ class Events extends Component {
         events: eventsStore.getAll(),
         agenda: agendaStore.getAll()
       });
+      // Hide spinner
+      this.props.appLoaded();
     }
   }
 
@@ -33,6 +34,8 @@ class Events extends Component {
   }
 
   componentWillMount(){
+    // Start the spinner
+    this.props.appLoading();
     // Trigger data fetch
     eventsActions.fetchEvents();
     agendaActions.fetchAgenda();
@@ -50,7 +53,6 @@ class Events extends Component {
   render() {
     return (
       <main className="events">
-        {this.state.events.length === 0 ? <Spinner show={true}/> : null}
         <div className="container">
           <h2>Events</h2>
           <ul className="events-navigation">

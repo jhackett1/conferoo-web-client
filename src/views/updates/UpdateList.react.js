@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Spinner from  '../../partials/Spinner.react';
 import '../../styles/updates.css';
 import { Link } from 'react-router-dom';
 
@@ -18,15 +17,17 @@ class UpdateList extends Component {
       this.setState({
         updates: updatesStore.getAll()
       });
+    this.props.appLoaded();
     }
   }
 
   componentDidMount() {
     window.scrollTo(0, 0)
-  }  
+  }
 
   componentWillMount(){
     // Trigger data fetch
+    this.props.appLoading();
     updatesActions.fetchUpdates();
     // Subscribe state to store changes
     updatesStore.on('change', this.onChange);
@@ -67,7 +68,6 @@ class UpdateList extends Component {
 
     return (
       <main className="updates">
-        {this.state.updates.length === 0 ? <Spinner show={true}/> : null}
         <div className="container">
           <h2>Updates</h2>
           <ul className="updates-list">

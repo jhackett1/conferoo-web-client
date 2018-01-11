@@ -49,12 +49,15 @@ a.button, button
     margin-right: 7px
 .spinner
   height: 5px
+  margin-bottom: -5px
   width: 100%
-  position: absolute
-  top: calc(36px + 98px)
-  // left: 0px
   overflow: hidden
   background-color: transparentize($grey4, 0.8)
+  opacity: 0
+  position: relative
+  transition: 0.5s ease-in-out
+  &.visible
+    opacity: 1
   &:before
     display: block
     position: absolute

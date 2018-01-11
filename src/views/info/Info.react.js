@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../styles/info.css';
-import Spinner from  '../../partials/Spinner.react';
 import Profile from './Profile.react';
 
 // Flux
@@ -19,6 +18,8 @@ class Info extends Component {
       this.setState({
         pages: infoStore.getAll()
       });
+      // Hide spinner
+      this.props.appLoaded();
     }
   }
 
@@ -27,6 +28,8 @@ class Info extends Component {
   }
 
   componentWillMount(){
+    // Show spinner
+    this.props.appLoading();
     // Trigger data fetch
     infoActions.fetchInfo();
     // Subscribe state to store changes
@@ -52,11 +55,9 @@ class Info extends Component {
 
     return (
       <main className="info">
-        {this.state.pages.length === 0 ? <Spinner show={true}/> : null}
         <div className="container">
           <h2>Info</h2>
           <p>Everything you need to know about the conference.</p>
-
           <ul className="pages-list">
             {PagesList}
           </ul>

@@ -54,11 +54,15 @@ a.button, button {
 
 .spinner {
   height: 5px;
+  margin-bottom: -5px;
   width: 100%;
-  position: absolute;
-  top: calc(36px + 98px);
   overflow: hidden;
-  background-color: rgba(207, 207, 207, 0.2); }
+  background-color: rgba(207, 207, 207, 0.2);
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease-in-out; }
+  .spinner.visible {
+    opacity: 1; }
   .spinner:before {
     display: block;
     position: absolute;

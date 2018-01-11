@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Spinner from  '../../partials/Spinner.react';
 import '../../styles/polls.css';
 import PollItem from './PollItem.react';
 
@@ -18,6 +17,8 @@ class Polls extends Component {
       this.setState({
         polls: pollsStore.getAll()
       });
+      // Hide spinner
+      this.props.appLoaded();
     }
   }
 
@@ -26,6 +27,8 @@ class Polls extends Component {
   }
 
   componentWillMount(){
+    // Show spinner
+    this.props.appLoading();
     // Trigger data fetch
     pollActions.fetchPolls();
     // Subscribe state to store changes
@@ -51,7 +54,6 @@ class Polls extends Component {
 
     return (
       <main className="polls">
-        {this.state.polls.length === 0 ? <Spinner show={true}/> : null}
         <div className="container">
           <h2>Polls</h2>
           <p>Pose questions to speakers and provide feedback.</p>
