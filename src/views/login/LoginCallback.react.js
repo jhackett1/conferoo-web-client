@@ -85,11 +85,11 @@ class LoginCallback extends Component {
     } else {
         return (
           <main className="login">
+            <Spinner show={true}/>
             <div className="branding">
               <img className="app-logo" alt="logo" src="/logo.svg"/>
-              <h1>Fast Stream <br/>Conference <span>2018</span></h1>
+              <h1>Understanding <br/>Britain <span>2018</span></h1>
             </div>
-            <Spinner show={true}/>
             <h2>Logging you in...</h2>
           </main>
         );

@@ -22,7 +22,7 @@ class Login extends React.Component{
     <main className="login">
       <div className="branding">
         <img className="app-logo" alt="logo" src="/logo.svg"/>
-        <h1>Fast Stream <br/>Conference <span>2018</span></h1>
+        <h1>Understanding <br/>Britain <span>2018</span></h1>
       </div>
       <a className="button" onClick={this.handleClick}><i className="fa fa-google"></i> Log in with Google</a>
       <p>Please log in with your Google account, ideally a @faststream.civilservice.gov.uk address.</p>
