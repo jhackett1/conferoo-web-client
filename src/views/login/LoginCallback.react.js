@@ -6,9 +6,6 @@ import '../../styles/login.css';
 import userService from '../../services/userService';
 import Spinner from '../../partials/Spinner.react';
 
-import Banner from '../../partials/Banner.react';
-import Header from '../../partials/Header.react';
-
 class LoginCallback extends Component {
   // Initial state
   constructor(props){
@@ -92,6 +89,7 @@ class LoginCallback extends Component {
               <img className="app-logo" alt="logo" src="/logo.svg"/>
               <h1>Fast Stream <br/>Conference <span>2018</span></h1>
             </div>
+            <Spinner show={true}/>
             <h2>Logging you in...</h2>
           </main>
         );

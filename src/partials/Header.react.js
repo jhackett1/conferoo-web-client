@@ -11,7 +11,7 @@ class Header extends React.Component{
         <header>
           <Link to="/" className="container">
             <img className="app-logo" alt="logo" src="/logo.svg"/>
-            <h1>Fast Stream <br/>Conference <span>2018</span></h1>
+            <h1>Understanding <br/>Britain <span>2018</span></h1>
           </Link>
         </header>
         <Spinner show={this.props.loading}/>

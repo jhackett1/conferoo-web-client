@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Humandate from 'human-date';
-import MultipleChoiceOptions from './MultipleChoiceOptions.react';
-import pollsApi from '../../services/polls';
 import userService from '../../services/userService';
 
 import * as pollActions from '../../actions/pollActions';

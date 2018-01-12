@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import Humandate from 'human-date';
 import MultipleChoiceOptions from './MultipleChoiceOptions.react';
-import pollsApi from '../../services/polls';
 import OpenPollItem from './OpenPollItem.react';
 
 class PollItem extends Component {
-  constructor(props){
-    super(props);
-  }
-
-
   render() {
     const poll = this.props.poll;
 

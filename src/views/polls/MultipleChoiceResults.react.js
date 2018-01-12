@@ -33,25 +33,25 @@ class MultipleChoiceResults extends React.Component{
         {(this.props.options.a) ?
           <li>
             <h5>{this.props.options.a}</h5>
-            <div className={classMeUp(aPercent)} style={calcStyle(aPercent)}><span>{parseInt(aPercent*100)}%</span></div>
+            <div className={classMeUp(aPercent)} style={calcStyle(aPercent)}><span>{parseInt(aPercent*100, 10)}%</span></div>
           </li>
         : null}
         {(this.props.options.b) ?
           <li>
             <h5>{this.props.options.b}</h5>
-            <div className={classMeUp(bPercent)} style={calcStyle(bPercent)}><span>{parseInt(bPercent*100)}%</span></div>
+            <div className={classMeUp(bPercent)} style={calcStyle(bPercent)}><span>{parseInt(bPercent*100, 10)}%</span></div>
           </li>
         : null}
         {(this.props.options.c) ?
           <li>
             <h5>{this.props.options.c}</h5>
-            <div className={classMeUp(cPercent)} style={calcStyle(cPercent)}><span>{parseInt(cPercent*100)}%</span></div>
+            <div className={classMeUp(cPercent)} style={calcStyle(cPercent)}><span>{parseInt(cPercent*100, 10)}%</span></div>
           </li>
         : null}
         {(this.props.options.d) ?
           <li>
             <h5>{this.props.options.d}</h5>
-            <div className={classMeUp(dPercent)} style={calcStyle(dPercent)}><span>{parseInt(dPercent*100)}%</span></div>
+            <div className={classMeUp(dPercent)} style={calcStyle(dPercent)}><span>{parseInt(dPercent*100, 10)}%</span></div>
           </li>
         : null}
         </ul>

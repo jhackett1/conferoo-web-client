@@ -6,7 +6,7 @@ class Profile extends React.Component{
     let profile = userService.getProfile();
     return(
       <section className="user-profile">
-        <img src={profile.image}/>
+        <img alt={profile.displayName} src={profile.image}/>
         <h4>{profile.displayName}</h4>
         <p>{profile.email}</p>
         <p>Attending on {profile.programme}</p>

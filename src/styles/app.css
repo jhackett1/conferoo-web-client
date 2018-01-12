@@ -43,10 +43,10 @@ a.button, button {
   cursor: pointer;
   text-align: center;
   transition: 0.2s ease-in-out;
-  border-bottom: 3px solid #0a30d0; }
+  border-bottom: 2px solid #0a30d0; }
   a.button.orange, button.orange {
     background-color: #f6682f;
-    border-bottom: 3px solid #b73a08; }
+    border-bottom: 2px solid #b73a08; }
   a.button:hover, button:hover {
     filter: brightness(1.1); }
   a.button i, button i {
@@ -240,6 +240,8 @@ main.policies h1 {
 
 main.policies p {
   margin-bottom: 20px; }
+  main.policies p a {
+    color: #4a6bf6; }
 
 main.policies h3 {
   margin: 10px 0px; }

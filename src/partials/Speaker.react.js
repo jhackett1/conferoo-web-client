@@ -50,7 +50,7 @@ class Speaker extends React.Component{
 
       return(
         <section className="speaker">
-          <img className="portrait" src={image} />
+          <img alt={speaker.name} className="portrait" src={image} />
           <h4>{speaker.name}</h4>
           <h5 className="position">{speaker.position}</h5>
           <p>{shortBio}</p>
