@@ -22,6 +22,7 @@ const updatesApi = {
         cb(null, processedData)
       })
       .catch(function(err){
+        userService.expiredToken(err);
         cb(err, null)
       })
   },
@@ -38,6 +39,7 @@ const updatesApi = {
         cb(null, response.data)
       })
       .catch(function(err){
+        userService.expiredToken(err);        
         cb(err, null)
       })
   },

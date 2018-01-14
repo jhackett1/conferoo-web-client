@@ -22,6 +22,7 @@ const eventsApi = {
         cb(null, processedData)
       })
       .catch(function(err){
+        userService.expiredToken(err);        
         cb(err, null)
       })
   },

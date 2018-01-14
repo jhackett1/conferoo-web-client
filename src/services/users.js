@@ -20,6 +20,7 @@ const usersApi = {
         cb(null, response.data)
       })
       .catch(function(err){
+        userService.expiredToken(err);        
         cb(err, null)
       })
   },
@@ -36,6 +37,7 @@ const usersApi = {
         cb(null, response.data)
       })
       .catch(function(err){
+        userService.expiredToken(err);
         cb(err, null)
       })
   }

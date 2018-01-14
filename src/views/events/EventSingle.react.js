@@ -72,6 +72,9 @@ class EventSingle extends Component {
         <a href={this.state.event.slides} target="blank" className="button orange"><i className="fa fa-download"></i> Download slides</a>
       );
 
+      // Update page title
+      document.title = `${this.state.event.title} | Events | Fast Stream Conference 2018`;
+
       return (
         <section className="event-single">
           {this.state.event.title === undefined ? <Spinner show={true}/> : null}

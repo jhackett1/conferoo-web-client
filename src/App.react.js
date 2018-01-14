@@ -53,12 +53,16 @@ class App extends Component {
           <Info appLoading={this.appLoading} appLoaded={this.appLoaded}/>
         )}/>
 
-        <Route path="/contact" component={Contact}/>
-        <Route path="/policies" component={Policies}/>
+        <Route exact path="/contact" render={(routeProps) => (
+          <Contact appLoaded={this.appLoaded}/>
+        )}/>
+        <Route exact path="/policies" render={(routeProps) => (
+          <Policies appLoaded={this.appLoaded}/>
+        )}/>
 
         <Route component={Footer} />
 
-        <OfflineBar show={false}/>
+        <OfflineBar/>
       </div>
     );
   }

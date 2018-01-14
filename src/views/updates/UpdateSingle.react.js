@@ -51,6 +51,8 @@ class UpdateSingle extends Component {
       } else {
         image = `url(${this.state.update.image})`;
       }
+      // Update page title
+      document.title = `${this.state.update.title} | Updates | Fast Stream Conference 2018`;
 
       return (
 

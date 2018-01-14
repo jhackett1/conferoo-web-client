@@ -38,6 +38,14 @@ const userService = {
   // Destroy a token (eg. when logging out)
   removeToken(){
     localStorage.removeItem('conferoo_user_token');
+  },
+  // Handle a potentially expired token
+  expiredToken(err){
+    if (err.response.status === 401) {
+      // Handle expired tokens
+      console.log("Token expired, redirecting to /login");
+      document.location = '/login';
+    }
   }
 
 

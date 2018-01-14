@@ -19,6 +19,7 @@ const agendaApi = {
         cb(null, response.data)
       })
       .catch(function(err){
+        userService.expiredToken(err);        
         cb(err, null)
       })
   },
@@ -37,6 +38,7 @@ const agendaApi = {
         cb(null, response.data)
       })
       .catch(function(err){
+        userService.expiredToken(err);
         cb(err, null)
       })
   },

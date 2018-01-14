@@ -71,7 +71,8 @@ main.events ul.events-list {
         flex: 1; }
         main.events ul.events-list li.event-item a aside h5 {
           color: #969696;
-          margin-bottom: 3px; }
+          margin-bottom: 3px;
+          font-size: 0.9em; }
         main.events ul.events-list li.event-item a aside h3 {
           font-size: 1.2em; }
         main.events ul.events-list li.event-item a aside p {

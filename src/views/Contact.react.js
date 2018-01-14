@@ -21,7 +21,9 @@ class Contact extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0)
-  }  
+    // Hide spinner, if there
+    this.props.appLoaded();
+  }
 
   componentWillMount(){
     document.title = "Contact | Fast Stream Conference 2018";
