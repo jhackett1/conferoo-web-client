@@ -6,11 +6,9 @@ const config = {
   login_redirect_uri: 'https://conferoo-web-client.herokuapp.com/login/callback',
   // login_redirect_uri: 'https://fsconference.co.uk/login/callback',
   themes: [
-    "Cybersecurity",
-    "Diversity",
-    "Documentation",
-    "Materialism",
-    "Astral Projection"
+    "Understanding the UK",
+    "Policy and public engagement",
+    "Data and technology"
   ],
   venues: [
     'Big Room',
