@@ -46,11 +46,19 @@ class Polls extends Component {
       var animStyle = {
         animationDelay: i*0.2 + 's'
       }
-
       return(
         <PollItem style={animStyle} poll={poll} key={poll._id}/>
       );
     });
+
+    const NoResults = () => {
+      return (
+        <div className="message">
+        <h5 className="notice">{"There's nothing here"}</h5>
+        <p className="notice">No polls are open at the moment.</p>
+        </div>
+      )
+    }
 
     return (
       <main className="polls">
@@ -58,7 +66,7 @@ class Polls extends Component {
           <h2>Polls</h2>
           <p>Pose questions to speakers and provide feedback.</p>
           <ul className="polls-list">
-            {PollsList}
+            {(this.state.polls.length < 1) ? <NoResults/> : PollsList}
           </ul>
         </div>
       </main>

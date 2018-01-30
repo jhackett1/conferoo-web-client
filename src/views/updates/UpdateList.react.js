@@ -69,7 +69,7 @@ class UpdateList extends Component {
     return (
       <main className="updates">
         <div className="container">
-          <h2>Updates</h2>
+          <h2>News feed</h2>
           <ul className="updates-list">
             {UpdatesList}
           </ul>

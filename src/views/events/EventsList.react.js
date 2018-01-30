@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EventListItem from './EventListItem.react';
+import Decoration from './Decoration.react';
 
 import config from '../../config';
 
@@ -51,9 +52,15 @@ class EventsList extends Component {
         animationDelay: i*0.2 + 's'
       }
 
-      return(
-        <EventListItem style={animStyle} key={event._id} data={event} index={i} events={filteredEvents} agenda={this.props.agenda}/>
-      )
+      if (event.type && event.type === "decoration") {
+        return(
+          <Decoration description={event.title} time={event.time}/>
+        )
+      } else {
+        return(
+          <EventListItem style={animStyle} key={event._id} data={event} index={i} events={filteredEvents} agenda={this.props.agenda}/>
+        )
+      }
 
     });
 

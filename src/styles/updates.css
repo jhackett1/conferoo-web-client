@@ -43,6 +43,8 @@ main.update-single p {
 
 main.update-single article {
   margin: 30px auto; }
+  main.update-single article iframe {
+    max-width: 100%; }
 
 @media screen and (min-width: 500px) {
   main.update-single h2 {

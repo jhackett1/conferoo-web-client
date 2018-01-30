@@ -54,9 +54,9 @@ class Events extends Component {
     return (
       <main className="events">
         <div className="container">
-          <h2>Events</h2>
+          <h2>Sessions</h2>
           <ul className="events-navigation">
-            <li><NavLink exact to="/events">All events</NavLink></li>
+            <li><NavLink exact to="/events">All sessions</NavLink></li>
             <li><NavLink exact to="/events/agenda">My agenda</NavLink></li>
           </ul>
           <Switch>

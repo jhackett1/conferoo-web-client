@@ -22,7 +22,7 @@ class Agenda extends Component {
       return (
         <div className="message">
         <h5 className="notice">{"There's nothing here"}</h5>
-        <p className="notice">Try saving some events to your agenda.</p>
+        <p className="notice">Try saving some sessions to your agenda.</p>
         </div>
       )
     }

@@ -6,8 +6,15 @@ main.events select {
   color: #707070;
   font-family: "Nunito Sans", "Helvetica", sans-serif;
   font-size: 0.9em;
+  display: inline-block;
   padding: 5px;
-  display: inline-block; }
+  -webkit-appearance: none;
+  padding-right: 20px;
+  background-image: url("/arrow.svg");
+  background-position: center right;
+  border-right: 4px solid #ffffff;
+  background-size: 15px 8px;
+  background-repeat: no-repeat; }
 
 main.events ul.events-navigation {
   border-bottom: 1px solid #cfcfcf;
@@ -35,6 +42,13 @@ main.events ul.events-list {
     display: inline-block;
     margin: 10px auto;
     color: #707070; }
+  main.events ul.events-list li.decoration-item {
+    text-align: center;
+    border: 0.5px solid #969696;
+    margin-bottom: 10px;
+    color: #969696;
+    border-radius: 1px;
+    padding: 10px; }
   main.events ul.events-list li.event-item {
     width: 100%;
     margin-bottom: 10px;
@@ -100,7 +114,8 @@ main.events section.event-single {
     margin: 5px 0px; }
   main.events section.event-single h5 {
     font-size: 1.1em;
-    color: #969696; }
+    color: #969696;
+    margin-bottom: 5px; }
     main.events section.event-single h5 span {
       color: #707070; }
   main.events section.event-single div.image {

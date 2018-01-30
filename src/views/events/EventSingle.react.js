@@ -80,8 +80,8 @@ class EventSingle extends Component {
           {this.state.event.title === undefined ? <Spinner show={true}/> : null}
             <h3>{this.state.event.title}</h3>
             <h5> At <span>{this.state.event.time}</span> on <span>{this.state.event.programme}</span> in <span>{this.state.event.venue}</span></h5>
-            <div className="image" style={{backgroundImage: image}}/>
             {(this.state.agenda.includes(this.state.event._id))? <a onClick={this.removeFromAgenda} className="button"><i className="fa fa-bookmark"></i> Remove from agenda</a> : <a onClick={this.addToAgenda} className="button"><i className="fa fa-bookmark-o"></i> Add to agenda</a> }
+            <div className="image" style={{backgroundImage: image}}/>
             <article dangerouslySetInnerHTML={{__html: this.state.event.content}}></article>
             <Speaker id={this.state.event.speaker}/>
             {(this.state.event.slides ? <Slides/> : null)}
