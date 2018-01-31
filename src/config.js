@@ -3,31 +3,29 @@ const config = {
   api_host: "https://www.fsconference.co.uk/api/",
   slack_webhook_url: "https://hooks.slack.com/services/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",
   // login_redirect_uri: 'http://localhost:3000/login/callback',
-  login_redirect_uri: 'https://conferoo-web-client.herokuapp.com/login/callback',
-  // login_redirect_uri: 'https://fsconference.co.uk/login/callback',
+  // login_redirect_uri: 'https://conferoo-web-client.herokuapp.com/login/callback',
+  login_redirect_uri: 'https://app.fsconference.co.uk/login/callback',
   themes: [
     "Understanding the UK",
     "Policy and public engagement",
     "Data and technology"
   ],
   venues: [
-    'Big Room',
-    'Little Room A',
-    'Little Room B'
+    'C11', 'C6/34', 'C8/9', 'C20'
   ],
   // Extra events to put in the timetable
   decoration: [{
-    title: "Welcome in Big Room",
-    time: "09:30"
+    title: "Registration",
+    time: "09:00"
   },{
     title: "Coffee break",
-    time: "11:35"
+    time: "11:45"
   },{
     title: "Lunch break",
-    time: "12:45"
+    time: "12:55"
   },{
     title: "Coffee break",
-    time: "14:45"
+    time: "15:35"
   },{
     title: "Networking",
     time: "17:00"

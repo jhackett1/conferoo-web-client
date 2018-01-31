@@ -60,7 +60,7 @@ class Policies extends React.Component{
 
           <h3>Your acceptance of these terms</h3>
 
-          <p>By using this Application, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Application. Your continued use of the Application following the posting of changes to this policy will be deemed your acceptance of those changes. This privacy policy was built  the web's #1 privacy policy generator.</p>
+          <p>By using this Application, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Application. Your continued use of the Application following the posting of changes to this policy will be deemed your acceptance of those changes.</p>
 
           <h3>Contacting us</h3>
 
