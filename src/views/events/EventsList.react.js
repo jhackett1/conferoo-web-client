@@ -49,7 +49,7 @@ class EventsList extends Component {
 
     const AllEvents = filteredEvents.map((event, i)=>{
       var animStyle = {
-        animationDelay: i*0.2 + 's'
+        // animationDelay: i*0.2 + 's'
       }
 
       if (event.type && event.type === "decoration") {

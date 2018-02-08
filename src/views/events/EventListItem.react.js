@@ -14,6 +14,11 @@ class EventListItem extends Component {
       image = `url(${event.image})`;
     }
 
+    let shortTeaser = event.teaser
+    if (event.teaser.length > 150) {
+      shortTeaser = event.teaser.substring(0, 150) + "...";
+    }
+
     const Label = ()=> {
 
       if (i > 0) {
@@ -35,7 +40,7 @@ class EventListItem extends Component {
             <div className="image" style={{backgroundImage: image}}/>
             <aside>
               <h3>{event.title}</h3>
-              <p>{event.teaser}</p>
+              <p>{shortTeaser}</p>
             </aside>
             {(this.props.agenda.includes(event._id))? <i className="fa fa-bookmark"></i> : <i className="fa fa-bookmark-o"></i> }
           </Link>

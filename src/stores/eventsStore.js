@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
 import dispatcher from '../dispatcher';
 import config from '../config';
+import userService from '../services/userService';
 
 class EventsStore extends EventEmitter {
   constructor(){
@@ -8,12 +9,15 @@ class EventsStore extends EventEmitter {
     this.events = []
   }
 
-  // Provide current store
+  // Provide current store, based on user's day of attendance
   getAll(){
-
-    let decoratedEvents = this.events;
-
-    return decoratedEvents;
+    let profile = userService.getProfile();
+    console.log(profile.programme)
+    console.log(this.events)
+    let relevantEvents = this.events.filter(function(event){
+      return event.programme === profile.programme;
+    });
+    return relevantEvents;
   }
 
   // Provide one update by ID

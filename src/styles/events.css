@@ -71,18 +71,22 @@ main.events ul.events-list {
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
-      text-decoration: none; }
+      text-decoration: none;
+      position: relative; }
       main.events ul.events-list li.event-item a div.image {
-        width: 25%;
-        height: 150px;
-        flex: 1;
+        width: 150px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background-position: center;
         background-size: cover;
         border-radius: 1px; }
       main.events ul.events-list li.event-item a aside {
         width: 75%;
-        padding: 15px;
-        flex: 1; }
+        margin-left: 150px;
+        padding: 15px; }
         main.events ul.events-list li.event-item a aside h5 {
           color: #969696;
           margin-bottom: 3px;
@@ -133,11 +137,9 @@ main.events section.event-single {
   main.events ul.events-navigation li {
     font-size: 1em; }
   main.events ul.events-list li.event-item a div.image {
-    width: 15%;
-    height: 150px;
-    flex: 1; }
+    width: 200px; }
   main.events ul.events-list li.event-item a aside {
     padding: 20px;
-    flex: 2; }
+    margin-left: 200px; }
     main.events ul.events-list li.event-item a aside h3 {
       font-size: 1.4em; } }
