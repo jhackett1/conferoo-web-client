@@ -11,13 +11,7 @@ class EventsStore extends EventEmitter {
 
   // Provide current store, based on user's day of attendance
   getAll(){
-    let profile = userService.getProfile();
-    console.log(profile.programme)
-    console.log(this.events)
-    let relevantEvents = this.events.filter(function(event){
-      return event.programme === profile.programme;
-    });
-    return relevantEvents;
+    return this.events;
   }
 
   // Provide one update by ID
@@ -29,7 +23,17 @@ class EventsStore extends EventEmitter {
 
   // Update store
   fetchEvents(newEvents){
+    // Get user profile
+    let profile = userService.getProfile();
+    // Filter events to those matching user's profile
+    newEvents = newEvents.filter(function(event){
+      return event.programme === profile.programme;
+    });
+
     this.events = newEvents;
+
+    console.log(this.events)
+
     // Get the decorative events from config
     let decoration = config.decoration;
     // For every decorative event...

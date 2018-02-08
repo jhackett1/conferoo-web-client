@@ -96,7 +96,8 @@ main.events ul.events-list {
         main.events ul.events-list li.event-item a aside p {
           color: #969696;
           margin-top: 3px;
-          font-size: 0.9em; }
+          font-size: 0.9em;
+          margin-bottom: 20px; }
 
 main.events section.event-single {
   padding: 0; }
