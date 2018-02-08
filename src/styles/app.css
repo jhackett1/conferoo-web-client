@@ -139,7 +139,8 @@ header {
     text-decoration: none; }
     header .container img {
       max-height: 70px;
-      opacity: 0.8; }
+      opacity: 0.8;
+      width: 46px; }
     header .container h1 {
       color: #ffffff;
       margin-left: 20px;
