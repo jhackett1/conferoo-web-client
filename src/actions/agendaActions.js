@@ -34,6 +34,10 @@ export function addToAgenda(eventId, agenda){
 }
 
 export function removeFromAgenda(eventId, agenda){
+
+  console.log("remove this id from agenda:", eventId)
+  console.log("agenda currently is: ", agenda)
+
   console.log("remove from agenda ACTION FIRING")
   // Fire initial event
   dispatcher.dispatch({
@@ -45,6 +49,8 @@ export function removeFromAgenda(eventId, agenda){
     agenda.splice( index, 1 );
   }
   let updatedAgenda = agenda;
+
+  console.log("agenda is now: ", updatedAgenda)
   dispatcher.dispatch({
     type: 'REMOVING_FROM_AGENDA_SUCCESS',
     agenda: updatedAgenda
@@ -52,6 +58,9 @@ export function removeFromAgenda(eventId, agenda){
   // Make API call
   agendaApi.updateAgenda(updatedAgenda, (err, response)=>{
     if(err) return dispatcher.dispatch({type: 'REMOVING_FROM_AGENDA_ERROR'});
+
+    console.log("have updated agenda on server to:", response)
+
     dispatcher.dispatch({
       type: 'REMOVING_FROM_AGENDA_SUCCESS',
       agenda: updatedAgenda

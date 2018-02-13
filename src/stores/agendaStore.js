@@ -9,11 +9,13 @@ class AgendaStore extends EventEmitter {
 
   // Provide current store
   getAll(){
-    // console.log(this.agenda)
+    // console.log("AGENDA BEING FETCHED FROM STORE: ", this.agenda)
     return this.agenda;
   }
 
   fetchAgenda(agenda){
+    // console.log("UPDATING AGENDA FROM NETWORK: ", agenda)
+    console.log("will update store to: ", agenda)
     this.agenda = agenda;
     this.emit('change');
   }

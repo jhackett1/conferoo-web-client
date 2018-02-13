@@ -8,6 +8,8 @@ class Agenda extends Component {
 
   render() {
 
+    console.log("view has this agenda: ", this.props.agenda)
+
     let agenda = this.props.events.filter((event)=>{
       return this.props.agenda.includes(event._id);
     })

@@ -18,7 +18,8 @@ main.login, main.onboarding {
     main.login div.branding img, main.onboarding div.branding img {
       max-height: 120px;
       margin-right: 20px;
-      opacity: 0.7; }
+      opacity: 0.7;
+      width: 50px; }
     main.login div.branding h1, main.onboarding div.branding h1 {
       font-size: 1.5em;
       color: #ffffff; }

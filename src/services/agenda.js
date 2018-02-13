@@ -10,7 +10,7 @@ const agendaApi = {
   getAgenda: function(cb){
     Axios({
       method: 'get',
-      url: host + 'agenda/',
+      url: host + 'agenda?buster='+ new Date().getTime(),
       headers: {
         Authorization: userService.getToken()
       }
@@ -19,7 +19,7 @@ const agendaApi = {
         cb(null, response.data)
       })
       .catch(function(err){
-        userService.expiredToken(err);        
+        userService.expiredToken(err);
         cb(err, null)
       })
   },
@@ -28,7 +28,7 @@ const agendaApi = {
   updateAgenda: function(newAgenda, cb){
     Axios({
       method: 'put',
-      url: host + 'agenda/',
+      url: host + 'agenda?buster='+ new Date().getTime(),
       headers: {
         Authorization: userService.getToken()
       },
